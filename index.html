@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- <style>
+        /* Css Disini */
+        .input-form{
+            width: 200px !important;
+            /* !Important untuk mendahului dipanggil */
+        }
+
+        #email-form{
+            width: 400px;
+        }
+    </style> -->
+
+    <link rel="stylesheet" href="/HTML/css/style.css">
+
+    <script defer>
+        // Script Disini
+        console.log("testing");
+    </script>
+
+    <script defer src="/HTML/js/script.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="rowMenu">
+            <div class="menu">Menu 1</div>
+            <div class="menu">Menu 2</div>
+            <div class="menu">Menu 3</div>
+        </div>
+    </div>
+
+    <div class="header2">
+        <div class="rowMenu2">
+            <div class="menu2">Menu 1</div>
+            <div class="menu2">Menu 2</div>
+            <div class="menu2">Menu 3</div>
+        </div>
+    </div>
+
+    <div id="div1" class="hidden">
+
+
+
+        <h1>ini H1.</h1>
+        <h2>ini H2.</h2>
+        <h3>ini H3.</h3>
+        <h4>ini H4.</h4>
+        <h5>ini H5.</h5>
+        <h6>ini H6.</h6>
+
+        <p>ini Paragraf.</p>
+        <p>ini Paragraf 2.</p>
+        <p>
+        <ul>
+            <li>List 1</li>
+            <li>List 2</li>
+            <li>List 3</li>
+        </ul>
+        </p>
+
+        <hr>
+
+        <p>
+        <ol>
+            <li>List 1</li>
+            <li>List 2</li>
+            <li>List 3</li>
+        </ol>
+        </p>
+
+        <div id="" class="">ini DIV. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; space</div>
+        <div>ini DIV 2.</div>
+        <div id="div3">ini DIV 3.</div>
+
+        <br>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ZbZSe6N_BXs" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+        <span>ini SPAN.</span>
+
+        <br>
+
+        <img
+            src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fillustrations%2Fsearch%2Fbackground%2F&psig=AOvVaw0vSp2ozQT0Akdefm1JnYyW&ust=1608038841416000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKjomdLJze0CFQAAAAAdAAAAABAD">
+
+        <img src="/HTML/img/gambar.jpg" alt="" srcset="" height="200px">
+
+        <a href="/HTML/test.html">test</a>
+
+        <form method="POST" action="test.html">
+            <label for="">Nama</label>
+            <input id="inputNama" type="text" name="name" value="admin" readonly style="width: 200px;">
+            <br>
+            <label for="">Password</label>
+            <input class="input-form" type="password">
+            <br>
+            <label for="">Email</label>
+            <input id="email-form" class="input-form" style="width:50px;" type="email" name="email"
+                placeholder="Contoh@mail.com" disabled>
+            <br>
+            <label for="">Jenis Kelamin: </label>
+            <input type="radio" name="jenis-kelamin"> Laki-Laki
+            <input type="radio" name="jenis-kelamin">Perempuan
+            <br>
+
+            <label for="">Hobby:</label>
+            <input type="checkbox" name="hobby">Membaca
+            <input type="checkbox" name="hobby">Berenang
+            <input type="checkbox" name="hobby">Tidur
+
+            <br>
+
+            <label for="">Tanggal Lahir</label>
+            <input class="input-form" type="date" name="age">
+
+            <br>
+
+            <label for="">Umur</label>
+            <input type="number" min="10" max="12" placeholder="Set Umur" class="input-form">
+
+            <br>
+
+            <label for="">Alamat</label>
+            <textarea cols="30" rows="3"></textarea>
+
+            <br>
+
+
+            <input type="button" value="Button" onclick="btnClick()">
+            <br>
+            <input type="submit" value="Submit">
+            <br>
+            <input type="reset" value="Reset">
+
+            <table>
+                <tbody>
+                    <tr>
+                        <td width="100px">Nama</td>
+                        <td>:</td>
+                        <td>
+                            <input type="text" placeholder="Masukan nama anda!" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td>:</td>
+                        <td>
+                            <input type="password" placeholder="Masukan nama anda!">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+
+        <table border="1" width="80%">
+            <!-- <thead> -->
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th colspan="2">Hobby</th>
+            </tr>
+            <!-- </thead> -->
+            <!-- <tbody> -->
+            <tr>
+                <td align="right">1</td>
+                <td>Administrator</td>
+                <td align="center">Jakarta</td>
+                <td>Membaca</td>
+                <td rowspan="2">Tidur</td>
+            </tr>
+            <tr>
+                <td align="right">2</td>
+                <td>User</td>
+                <td align="center">Bogor</td>
+                <td>Berenang</td>
+            </tr>
+            <!-- </tbody> -->
+        </table>
+
+
+
+        <br>
+        <br>
+        <br>
+
+        <table border="1" width="80%">
+            <!-- <thead> -->
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th colspan="2">Hobby</th>
+            </tr>
+            <!-- </thead> -->
+            <!-- <tbody> -->
+            <tr>
+                <td align="right">1</td>
+                <td>Administrator</td>
+                <td align="center">Jakarta</td>
+                <td>Membaca</td>
+                <td rowspan="2">Tidur</td>
+            </tr>
+            <tr>
+                <td align="right">2</td>
+                <td>User</td>
+                <td align="center">Bogor</td>
+                <td>
+                    <table border="1" width="80%">
+                        <!-- <thead> -->
+                        <tr>
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>Alamat</th>
+                            <th colspan="2">Hobby</th>
+                        </tr>
+                        <!-- </thead> -->
+                        <!-- <tbody> -->
+                        <tr>
+                            <td align="right">1</td>
+                            <td>Administrator</td>
+                            <td align="center">Jakarta</td>
+                            <td>Membaca</td>
+                            <td rowspan="2">Tidur</td>
+                        </tr>
+                        <tr>
+                            <td align="right">2</td>
+                            <td>User</td>
+                            <td align="center">Bogor</td>
+                            <td>Berenang</td>
+                        </tr>
+                        <!-- </tbody> -->
+                    </table>
+                </td>
+            </tr>
+            <!-- </tbody> -->
+        </table>
+
+    </div>
+
+    <div id="div2" class="hidden">
+        ini div 2
+    </div>
+
+</body>
+
+</html>

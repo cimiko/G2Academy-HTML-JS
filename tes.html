@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .dot-blue {
+            height: 12px;
+            width: 12px;
+            background-color: #202438;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .dot-grey {
+            height: 12px;
+            width: 12px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="col-2-2">
+        <span class="dot-grey" id="dot-11" onclick="setCircle(1,1, event)"></span>
+        <span class="dot-grey" id="dot-12" onclick="setCircle(1,2, event)"></span>
+        <span class="dot-grey" id="dot-13" onclick="setCircle(1,3, event)"></span>
+        <span class="dot-grey" id="dot-14" onclick="setCircle(1,4, event)"></span>
+        <span class="dot-grey" id="dot-15" onclick="setCircle(1,5, event)"></span>
+        <span class="dot-grey" id="dot-16" onclick="setCircle(1,6, event)"></span>
+        <span class="dot-grey" id="dot-17" onclick="setCircle(1,7, event)"></span>
+    </div>
+</body>
+<script>
+    function setCircle(classId, dotId, e) {
+    e.preventDefault();
+
+    for ( let i = 1; i <= dotId; i++ ) {
+
+        if ( i <= dotId ) {
+            let setDotClass = document.getElementById("dot-" + classId + i);
+            setDotClass.classList.remove("dot-grey");
+            setDotClass.classList.add("dot-blue");
+        }
+
+    }
+
+}
+</script>
+</html>

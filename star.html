@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div.star-container {
+            display: flex;
+        }
+
+        div.star {
+            border: 1px solid black;
+            width: 10px;
+            height: 10px;
+            margin: 10px 5px;
+            padding: 0;
+        }
+
+        div.star.fill{
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="star-container" skill="html">
+        <div class="star" value=1></div>
+        <div class="star" value=2></div>
+        <div class="star" value=3></div>
+        <div class="star" value=4></div>
+        <div class="star" value=5></div>
+    </div>
+
+    <div class="star-container" skill="js">
+        <div class="star" value=1></div>
+        <div class="star" value=2></div>
+        <div class="star" value=3></div>
+        <div class="star" value=4></div>
+        <div class="star" value=5></div>
+    </div>
+</body>
+
+<script>
+    function getAll(selector) {
+        return document.querySelectorAll(selector);
+    }
+
+    for (let index = 0; index < getAll('div.star-container div.star').length; index++) {
+        const el = getAll('div.star-container div.star')[index];
+        const parentSkill = el.closest("div.star-container").getAttribute("skill");
+
+        el.addEventListener('click', function () {
+            valueClicked = this.getAttribute("value");
+            fillStar(valueClicked, parentSkill)
+        })
+    }
+
+    function fillStar(value, skill) {
+        for (let index = 0; index < getAll(`div.star-container[skill=${skill}] div.star`).length; index++) {
+            const el = getAll(`div.star-container[skill=${skill}] div.star`)[index];
+            const elValue = el.getAttribute("value");
+
+            if(elValue <= value){
+                el.classList.add("fill")
+            }else{
+                el.classList.remove('fill')
+            }
+        }
+    }
+</script>
+
+<script src="../HTML/js/array.js"></script>
+<script src="../HTML/js/for.js"></script>
+
+</html>
