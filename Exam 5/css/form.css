@@ -1,18 +1,20 @@
-.form, .search{
+.form,
+.search {
     margin-top: 100px;
 }
 
-.table{
+.table {
     margin-top: 50px;
 }
 
-.form form, .search{
+.form form,
+.search {
     width: 500px;
     border-radius: 20px;
     background-color: lightgrey;
     padding: 20px 20px;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
