@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+
+    <script src="./js/cv.js" defer></script>
+
+    <style>
+        input[type="date"]{
+            background-color: deepskyblue;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="inputData">
+        <form name="userInput">
+            <table>
+                <tr class="color">
+                    <td class="color">Nama</td>
+                    <td>:</td>
+                    <td>
+                        <input type="text" name="name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>:</td>
+                    <td>
+                        <input type="radio" name="gender" value="Laki-Laki"> Laki-Laki
+                        <input type="radio" name="gender" value="Perempuan"> Perempuan
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tempat Lahir</td>
+                    <td>:</td>
+                    <td>
+                        <input type="text" name="place">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Tanggal Lahir</td>
+                    <td>:</td>
+                    <td>
+                        <input type="date" name="dob">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Hobby</td>
+                    <td>:</td>
+                    <td>
+                        <input type="checkbox" name="hobby" value="Berenang"> Berenang
+                        <input type="checkbox" name="hobby" value="Membaca"> Membaca
+                        <input type="checkbox" name="hobby" value="Badminton"> Badminton
+                        <input type="checkbox" name="hobby" value="Mendengarkan Music"> Mendengarkan Music
+        
+                    </td>
+                </tr>
+                <tr>
+                    <td>Alamat</td>
+                    <td>:</td>
+                    <td>
+                        <textarea name="address" id="address"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="center">
+                        <button onclick="save()">Simpan</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <div class="showData hidden">
+        <table>
+            <tr>
+                <td>Nama</td>
+                <td>:</td>
+                <td type="name"></td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin</td>
+                <td>:</td>
+                <td type="gender"></td>
+            </tr>
+            <tr>
+                <td>Tempat, Tanggal Lahir</td>
+                <td>:</td>
+                <td type="place-dob"></td>
+            </tr>
+            <tr>
+                <td>Hobby</td>
+                <td>:</td>
+                <td type="hobby"></td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td>:</td>
+                <td type="address"></td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <button onclick="prev()">Sebelumnya</button>
+                    <button onclick="next()">Selanjutnya</button>
+                </td>
+            </tr>
+        </table>
+        <button onclick="back()">Kembali</button>
+    </div>
+</body>
+</html>
