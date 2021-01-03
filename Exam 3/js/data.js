@@ -1819,7 +1819,7 @@ function prev(event) {
 
 
 
-function btnClick(event) {
+function btnClick() {
     event.preventDefault();
 
     let nama = document.querySelector('#name').value;
@@ -1842,3 +1842,5 @@ function btnClick(event) {
     // document.querySelector('#gitAddress').setAttribute('href', "github.com/" + git);
 
 }
+
+console.log(dataDB);
