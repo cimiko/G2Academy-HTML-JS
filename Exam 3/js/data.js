@@ -37,7 +37,7 @@ function next(event) {
                 <div class="row" id="name-profile">
                     <div class="col-3">
                         <div class="profile-img">
-                            <img src="../Exam 1/img/profile.jpg" alt="">
+                            <img src="./img/profile.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-9">
@@ -133,7 +133,7 @@ function next(event) {
                                         <a href="https://www.facebook.com/hartono.selalu">華黃 (Hartono Wijaya)</a>
                                     </div>
                                     <div class="col-3">
-                                        <img src="../Exam 1/img/facebook.svg" alt="">
+                                        <img src="./img/facebook.svg" alt="">
                                     </div>
     
                                     <div class="col-9 mt-3">
@@ -141,7 +141,7 @@ function next(event) {
                                         <a href="https://www.instagram.com/jishucimiko/">jishucimiko</a>
                                     </div>
                                     <div class="col-3 mt-3">
-                                        <img src="../Exam 1/img/instagram.svg" alt="">
+                                        <img src="./img/instagram.svg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -938,7 +938,7 @@ function prev(event) {
                 <div class="row" id="name-profile">
                     <div class="col-3">
                         <div class="profile-img">
-                            <img src="../Exam 1/img/profile.jpg" alt="">
+                            <img src="./img/profile.jpg" alt="">
                         </div>
                     </div>
                     <div class="col-9">
@@ -976,7 +976,7 @@ function prev(event) {
     
                                 <div class="information">
                                     <h6>GIT HUB</h6>
-                                    <a id="gitAddress" href="https://github.com/${dataDB[i].git}">github.com/${dataDB[i].git}</a>
+                                    <a id="gitAddress" href="https://github.com/${dataDB[i].git}">${dataDB[i].git}</a>
                                 </div>
                             </div>
     
@@ -1034,7 +1034,7 @@ function prev(event) {
                                         <a href="https://www.facebook.com/hartono.selalu">華黃 (Hartono Wijaya)</a>
                                     </div>
                                     <div class="col-3">
-                                        <img src="../Exam 1/img/facebook.svg" alt="">
+                                        <img src="./img/facebook.svg" alt="">
                                     </div>
     
                                     <div class="col-9 mt-3">
@@ -1042,7 +1042,7 @@ function prev(event) {
                                         <a href="https://www.instagram.com/jishucimiko/">jishucimiko</a>
                                     </div>
                                     <div class="col-3 mt-3">
-                                        <img src="../Exam 1/img/instagram.svg" alt="">
+                                        <img src="./img/instagram.svg" alt="">
                                     </div>
                                 </div>
                             </div>
