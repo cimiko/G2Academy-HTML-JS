@@ -8,14 +8,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="/Exam 2/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/Exam 2/css/form.css">
+    <link rel="stylesheet" href="./css/form.css">
 
-    <script defer src="/Exam 2/js/script.js"></script>
+    <script defer src="./js/script.js"></script>
+    <script defer src="./js/data.js"></script>
 
 
 </head>
@@ -24,6 +25,11 @@
     <div class="cv">
         <section>
 
+            <div class="button">
+                <input type="button" onclick="prev(event)" value="prev">
+                <input type="button" onclick="next(event)" value="next">
+            </div>
+
             <head>
                 <div id="header">
                     <div id="border-header"></div>
@@ -31,7 +37,7 @@
                     <div class="row" id="name-profile">
                         <div class="col-3">
                             <div class="profile-img">
-                                <img src="/Exam 1/img/profile.jpg" alt="">
+                                <img src="./img/profile.jpg" alt="">
                             </div>
                         </div>
                         <div class="col-9">
@@ -51,25 +57,28 @@
                                 </h5>
                                 <div class="border-dot"></div>
 
-                                <div class="information">
-                                    <h6>NAME</h6>
-                                    <p id="nama">Hartono</p>
+                                <div id="profile-info">
+                                    <div class="information">
+                                        <h6>NAME</h6>
+                                        <p id="nama">Hartono</p>
+                                    </div>
+    
+                                    <div class="information">
+                                        <h6>DATE OF BIRTH</h6>
+                                        <p id="tanggal">08 November 1996</p>
+                                    </div>
+    
+                                    <div class="information">
+                                        <h6>ADDRESS</h6>
+                                        <p id="alamat">Jl. 20 Desember No.81, Pegadungan, Kalideres, Jakarta Barat.</p>
+                                    </div>
+    
+                                    <div class="information">
+                                        <h6>GIT HUB</h6>
+                                        <a id="gitAddress" href="https://github.com/cimiko">github.com/cimiko</a>
+                                    </div>
                                 </div>
 
-                                <div class="information">
-                                    <h6>DATE OF BIRTH</h6>
-                                    <p id="tanggal">08 November 1996</p>
-                                </div>
-
-                                <div class="information">
-                                    <h6>ADDRESS</h6>
-                                    <p id="alamat">Jl. 20 Desember No.81, Pegadungan, Kalideres, Jakarta Barat.</p>
-                                </div>
-
-                                <div class="information">
-                                    <h6>GIT HUB</h6>
-                                    <a id="gitAddress" href="https://github.com/cimiko">github.com/cimiko</a>
-                                </div>
                             </div>
 
                             <div class="profile-information">
@@ -124,7 +133,7 @@
                                             <a href="https://www.facebook.com/hartono.selalu">華黃 (Hartono Wijaya)</a>
                                         </div>
                                         <div class="col-3">
-                                            <img src="/Exam 1/img/facebook.svg" alt="">
+                                            <img src="./img/facebook.svg" alt="">
                                         </div>
 
                                         <div class="col-9 mt-3">
@@ -132,7 +141,7 @@
                                             <a href="https://www.instagram.com/jishucimiko/">jishucimiko</a>
                                         </div>
                                         <div class="col-3 mt-3">
-                                            <img src="/Exam 1/img/instagram.svg" alt="">
+                                            <img src="./img/instagram.svg" alt="">
                                         </div>
                                     </div>
                                 </div>
@@ -307,18 +316,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator a">
-                                                <input class="circle circle-black a-1" type="button" value=""
-                                                    onclick="on('.a-1')">
-                                                <input class="circle circle-black b-1" type="button" value=""
-                                                    onclick="on('.b-1')">
-                                                <input class="circle circle-black c-1" type="button" value=""
-                                                    onclick="on('.c-1')">
-                                                <input class="circle circle-black d-1" type="button" value=""
-                                                    onclick="on('.d-1')">
-                                                <input class="circle circle-black e-1" type="button" value=""
-                                                    onclick="on('.e-1')">
-                                                <input class="circle f-1" type="button" value="" onclick="on('.f-1')">
-                                                <input class="circle g-1" type="button" value="" onclick="on('.g-1')">
+                                                <input class="circle circle-black" id="lvl-11" type="button" value=""
+                                                    onclick="on(1,1)">
+                                                <input class="circle circle-black" id="lvl-12" type="button" value=""
+                                                    onclick="on(1,2)">
+                                                <input class="circle circle-black" id="lvl-13" type="button" value=""
+                                                    onclick="on(1,3)">
+                                                <input class="circle circle-black" id="lvl-14" type="button" value=""
+                                                    onclick="on(1,4)">
+                                                <input class="circle circle-black" id="lvl-15" type="button" value=""
+                                                    onclick="on(1,5)">
+                                                <input class="circle" id="lvl-16" type="button" value=""
+                                                    onclick="on(1,6)">
+                                                <input class="circle" id="lvl-17" type="button" value=""
+                                                    onclick="on(1,7)">
                                             </div>
 
                                             <div class="col-6">
@@ -327,22 +338,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <div class="col-6 skill-indicator">
-                                                    <input class="circle circle-black a-2" type="button" value=""
-                                                        onclick="on('.a-2')">
-                                                    <input class="circle circle-black b-2" type="button" value=""
-                                                        onclick="on('.b-2')">
-                                                    <input class="circle circle-black c-2" type="button" value=""
-                                                        onclick="on('.c-2')">
-                                                    <input class="circle circle-black d-2" type="button" value=""
-                                                        onclick="on('.d-2')">
-                                                    <input class="circle circle-black e-2" type="button" value=""
-                                                        onclick="on('.e-2')">
-                                                    <input class="circle circle-black f-2" type="button" value=""
-                                                        onclick="on('.f-2')">
-                                                    <input class="circle circle-black g-2" type="button" value=""
-                                                        onclick="on('.g-2')">
-                                                </div>
+                                                <input class="circle circle-black" id="lvl-21" type="button" value=""
+                                                    onclick="on(2,1)">
+                                                <input class="circle circle-black" id="lvl-22" type="button" value=""
+                                                    onclick="on(2,2)">
+                                                <input class="circle circle-black" id="lvl-23" type="button" value=""
+                                                    onclick="on(2,3)">
+                                                <input class="circle circle-black" id="lvl-24" type="button" value=""
+                                                    onclick="on(2,4)">
+                                                <input class="circle circle-black" id="lvl-25" type="button" value=""
+                                                    onclick="on(2,5)">
+                                                <input class="circle circle-black" id="lvl-26" type="button" value=""
+                                                    onclick="on(2,6)">
+                                                <input class="circle circle-black" id="lvl-27" type="button" value=""
+                                                    onclick="on(2,7)">
                                             </div>
 
                                             <div class="col-6">
@@ -351,18 +360,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black a-3" type="button" value=""
-                                                    onclick="on('.a-3')">
-                                                <input class="circle circle-black b-3" type="button" value=""
-                                                    onclick="on('.b-3')">
-                                                <input class="circle circle-black c-3" type="button" value=""
-                                                    onclick="on('.c-3')">
-                                                <input class="circle circle-black d-3" type="button" value=""
-                                                    onclick="on('.d-3')">
-                                                <input class="circle circle-black e-3" type="button" value=""
-                                                    onclick="on('.e-3')">
-                                                <input class="circle f-3" type="button" value="" onclick="on('.f-3')">
-                                                <input class="circle g-3" type="button" value="" onclick="on('.g-3')">
+                                                <input class="circle circle-black" id="lvl-31" type="button" value=""
+                                                    onclick="on(3,1)">
+                                                <input class="circle circle-black" id="lvl-32" type="button" value=""
+                                                    onclick="on(3,2)">
+                                                <input class="circle circle-black" id="lvl-33" type="button" value=""
+                                                    onclick="on(3,3)">
+                                                <input class="circle circle-black" id="lvl-34" type="button" value=""
+                                                    onclick="on(3,4)">
+                                                <input class="circle circle-black" id="lvl-35" type="button" value=""
+                                                    onclick="on(3,5)">
+                                                <input class="circle" id="lvl-36" type="button" value=""
+                                                    onclick="on(3,6)">
+                                                <input class="circle" id="lvl-37" type="button" value=""
+                                                    onclick="on(3,7)">
                                             </div>
 
                                             <div class="col-6">
@@ -371,18 +382,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black a-4" type="button" value=""
-                                                    onclick="on('.a-4')">
-                                                <input class="circle circle-black b-4" type="button" value=""
-                                                    onclick="on('.b-4')">
-                                                <input class="circle circle-black c-4" type="button" value=""
-                                                    onclick="on('.c-4')">
-                                                <input class="circle circle-black d-4" type="button" value=""
-                                                    onclick="on('.d-4')">
-                                                <input class="circle circle-black e-4" type="button" value=""
-                                                    onclick="on('.e-4')">
-                                                <input class="circle f-4" type="button" value="" onclick="on('.f-4')">
-                                                <input class="circle g-4" type="button" value="" onclick="on('.g-4')">
+                                                <input class="circle circle-black" id="lvl-41" type="button" value=""
+                                                    onclick="on(4,1)">
+                                                <input class="circle circle-black" id="lvl-42" type="button" value=""
+                                                    onclick="on(4,2)">
+                                                <input class="circle circle-black" id="lvl-43" type="button" value=""
+                                                    onclick="on(4,3)">
+                                                <input class="circle circle-black" id="lvl-44" type="button" value=""
+                                                    onclick="on(4,4)">
+                                                <input class="circle circle-black" id="lvl-45" type="button" value=""
+                                                    onclick="on(4,5)">
+                                                <input class="circle" id="lvl-46" type="button" value=""
+                                                    onclick="on(4,6)">
+                                                <input class="circle" id="lvl-47" type="button" value=""
+                                                    onclick="on(4,7)">
                                             </div>
 
                                             <div class="col-6">
@@ -391,20 +404,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black a-2" type="button" value=""
-                                                    onclick="on('.a-2')">
-                                                <input class="circle circle-black b-5" type="button" value=""
-                                                    onclick="on('.b-5')">
-                                                <input class="circle circle-black c-5" type="button" value=""
-                                                    onclick="on('.c-5')">
-                                                <input class="circle circle-black d-5" type="button" value=""
-                                                    onclick="on('.d-5')">
-                                                <input class="circle circle-black e-5" type="button" value=""
-                                                    onclick="on('.e-5')">
-                                                <input class="circle circle-black f-5" type="button" value=""
-                                                    onclick="on('.f-5')">
-                                                <input class="circle circle-black g-5" type="button" value=""
-                                                    onclick="on('.g-5')">
+                                                <input class="circle circle-black" id="lvl-51" type="button" value=""
+                                                    onclick="on(5,1)">
+                                                <input class="circle circle-black" id="lvl-52" type="button" value=""
+                                                    onclick="on(5,2)">
+                                                <input class="circle circle-black" id="lvl-53" type="button" value=""
+                                                    onclick="on(5,3)">
+                                                <input class="circle circle-black" id="lvl-54" type="button" value=""
+                                                    onclick="on(5,4)">
+                                                <input class="circle circle-black" id="lvl-55" type="button" value=""
+                                                    onclick="on(5,5)">
+                                                <input class="circle circle-black" id="lvl-56" type="button" value=""
+                                                    onclick="on(5,6)">
+                                                <input class="circle circle-black" id="lvl-57" type="button" value=""
+                                                    onclick="on(5,7)">
                                             </div>
 
                                             <div class="col-6">
@@ -413,18 +426,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black a-6" type="button" value=""
-                                                    onclick="on('.a-6')">
-                                                <input class="circle circle-black b-6" type="button" value=""
-                                                    onclick="on('.b-6')">
-                                                <input class="circle circle-black c-6" type="button" value=""
-                                                    onclick="on('.c-6')">
-                                                <input class="circle circle-black d-6" type="button" value=""
-                                                    onclick="on('.d-6')">
-                                                <input class="circle circle-black e-6" type="button" value=""
-                                                    onclick="on('.e-6')">
-                                                <input class="circle f-6" type="button" value="" onclick="on('.f-6')">
-                                                <input class="circle g-6" type="button" value="" onclick="on('.g-6')">
+                                                <input class="circle circle-black" id="lvl-61" type="button" value=""
+                                                    onclick="on(6,1)">
+                                                <input class="circle circle-black" id="lvl-62" type="button" value=""
+                                                    onclick="on(6,2)">
+                                                <input class="circle circle-black" id="lvl-63" type="button" value=""
+                                                    onclick="on(6,3)">
+                                                <input class="circle circle-black" id="lvl-64" type="button" value=""
+                                                    onclick="on(6,4)">
+                                                <input class="circle circle-black" id="lvl-65" type="button" value=""
+                                                    onclick="on(6,5)">
+                                                <input class="circle" id="lvl-66" type="button" value=""
+                                                    onclick="on(6,6)">
+                                                <input class="circle" id="lvl-67" type="button" value=""
+                                                    onclick="on(6,7)">
                                             </div>
 
                                             <div class="col-6">
@@ -433,17 +448,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black a-7" type="button" value=""
-                                                    onclick="on('.a-7')">
-                                                <input class="circle circle-black b-7" type="button" value=""
-                                                    onclick="on('.b-7')">
-                                                <input class="circle circle-black c-7" type="button" value=""
-                                                    onclick="on('.c-7')">
-                                                <input class="circle circle-black d-7" type="button" value=""
-                                                    onclick="on('.d-7')">
-                                                <input class="circle e-7" type="button" value="" onclick="on('.e-7')">
-                                                <input class="circle f-7" type="button" value="" onclick="on('.f-7')">
-                                                <input class="circle g-7" type="button" value="" onclick="on('.g-7')">
+                                                <input class="circle circle-black" id="lvl-71" type="button" value=""
+                                                    onclick="on(7,1)">
+                                                <input class="circle circle-black" id="lvl-72" type="button" value=""
+                                                    onclick="on(7,2)">
+                                                <input class="circle circle-black" id="lvl-73" type="button" value=""
+                                                    onclick="on(7,3)">
+                                                <input class="circle circle-black" id="lvl-74" type="button" value=""
+                                                    onclick="on(7,4)">
+                                                <input class="circle" id="lvl-75" type="button" value=""
+                                                    onclick="on(7,5)">
+                                                <input class="circle" id="lvl-76" type="button" value=""
+                                                    onclick="on(7,6)">
+                                                <input class="circle" id="lvl-77" type="button" value=""
+                                                    onclick="on(7,7)">
                                             </div>
 
                                             <div class="col-6">
@@ -452,17 +470,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black a-8" type="button" value=""
-                                                    onclick="on('.a-8')">
-                                                <input class="circle circle-black b-8" type="button" value=""
-                                                    onclick="on('.b-8')">
-                                                <input class="circle circle-black c-8" type="button" value=""
-                                                    onclick="on('.c-8')">
-                                                <input class="circle circle-black d-8" type="button" value=""
-                                                    onclick="on('.d-8')">
-                                                <input class="circle e-8" type="button" value="" onclick="on('.e-8')">
-                                                <input class="circle f-8" type="button" value="" onclick="on('.f-8')">
-                                                <input class="circle g-8" type="button" value="" onclick="on('.g-8')">
+                                                <input class="circle circle-black" id="lvl-81" type="button" value=""
+                                                    onclick="on(8,1)">
+                                                <input class="circle circle-black" id="lvl-82" type="button" value=""
+                                                    onclick="on(8,2)">
+                                                <input class="circle circle-black" id="lvl-83" type="button" value=""
+                                                    onclick="on(8,3)">
+                                                <input class="circle circle-black" id="lvl-84" type="button" value=""
+                                                    onclick="on(8,4)">
+                                                <input class="circle" id="lvl-85" type="button" value=""
+                                                    onclick="on(8,5)">
+                                                <input class="circle" id="lvl-86" type="button" value=""
+                                                    onclick="on(8,6)">
+                                                <input class="circle" id="lvl-87" type="button" value=""
+                                                    onclick="on(8,7)">
                                             </div>
 
                                             <div class="col-6">
@@ -471,16 +492,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black a-9" type="button" value=""
-                                                    onclick="on('.a-9')">
-                                                <input class="circle circle-black b-9" type="button" value=""
-                                                    onclick="on('.b-9')">
-                                                <input class="circle circle-black c-9" type="button" value=""
-                                                    onclick="on('.c-9')">
-                                                <input class="circle d-9" type="button" value="" onclick="on('.d-9')">
-                                                <input class="circle e-9" type="button" value="" onclick="on('.e-9')">
-                                                <input class="circle f-9" type="button" value="" onclick="on('.f-9')">
-                                                <input class="circle g-9" type="button" value="" onclick="on('.g-9')">
+                                                <input class="circle circle-black" id="lvl-91" type="button" value=""
+                                                    onclick="on(9,1)">
+                                                <input class="circle circle-black" id="lvl-92" type="button" value=""
+                                                    onclick="on(9,2)">
+                                                <input class="circle circle-black" id="lvl-93" type="button" value=""
+                                                    onclick="on(9,3)">
+                                                <input class="circle" id="lvl-94" type="button" value=""
+                                                    onclick="on(9,4)">
+                                                <input class="circle" id="lvl-95" type="button" value=""
+                                                    onclick="on(9,5)">
+                                                <input class="circle" id="lvl-96" type="button" value=""
+                                                    onclick="on(9,6)">
+                                                <input class="circle" id="lvl-97" type="button" value=""
+                                                    onclick="on(9,7)">
                                             </div>
                                         </div>
                                     </div>
@@ -492,18 +517,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black a-10" type="button" value=""
-                                                    onclick="on('.a-10')">
-                                                <input class="circle circle-black b-10" type="button" value=""
-                                                    onclick="on('.b-10')">
-                                                <input class="circle circle-black c-10" type="button" value=""
-                                                    onclick="on('.c-10')">
-                                                <input class="circle circle-black d-10" type="button" value=""
-                                                    onclick="on('.d-10')">
-                                                <input class="circle circle-black e-10" type="button" value=""
-                                                    onclick="on('.e-10')">
-                                                <input class="circle f-10" type="button" value="" onclick="on('.f-10')">
-                                                <input class="circle g-10" type="button" value="" onclick="on('.g-10')">
+                                                <input class="circle circle-black" id="lvl-101" type="button" value=""
+                                                    onclick="on(10,1)">
+                                                <input class="circle circle-black" id="lvl-102" type="button" value=""
+                                                    onclick="on(10,2)">
+                                                <input class="circle circle-black" id="lvl-103" type="button" value=""
+                                                    onclick="on(10,3)">
+                                                <input class="circle circle-black" id="lvl-104" type="button" value=""
+                                                    onclick="on(10,4)">
+                                                <input class="circle circle-black" id="lvl-105" type="button" value=""
+                                                    onclick="on(10,5)">
+                                                <input class="circle" id="lvl-106" type="button" value=""
+                                                    onclick="on(10,6)">
+                                                <input class="circle" id="lvl-107" type="button" value=""
+                                                    onclick="on(10,7)">
                                             </div>
 
                                             <div class="col-6">
@@ -512,15 +539,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black a-11" type="button" value=""
-                                                    onclick="on('.a-11')">
-                                                <input class="circle circle-black b-11" type="button" value=""
-                                                    onclick="on('.b-11')">
-                                                <input class="circle c-11" type="button" value="" onclick="on('.c-11')">
-                                                <input class="circle d-11" type="button" value="" onclick="on('.d-11')">
-                                                <input class="circle e-11" type="button" value="" onclick="on('.e-11')">
-                                                <input class="circle f-11" type="button" value="" onclick="on('.f-11')">
-                                                <input class="circle g-11" type="button" value="" onclick="on('.g-11')">
+                                                <input class="circle circle-black" id="lvl-111" type="button" value=""
+                                                    onclick="on(11,1)">
+                                                <input class="circle circle-black" id="lvl-112" type="button" value=""
+                                                    onclick="on(11,2)">
+                                                <input class="circle" id="lvl-113" type="button" value=""
+                                                    onclick="on(11,3)">
+                                                <input class="circle" id="lvl-114" type="button" value=""
+                                                    onclick="on(11,4)">
+                                                <input class="circle" id="lvl-115" type="button" value=""
+                                                    onclick="on(11,5)">
+                                                <input class="circle" id="lvl-116" type="button" value=""
+                                                    onclick="on(11,6)">
+                                                <input class="circle" id="lvl-117" type="button" value=""
+                                                    onclick="on(11,7)">
                                             </div>
 
                                             <div class="col-6">
@@ -529,17 +561,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black a-12" type="button" value=""
-                                                    onclick="on('.a-12')">
-                                                <input class="circle circle-black b-12" type="button" value=""
-                                                    onclick="on('.b-12')">
-                                                <input class="circle circle-black c-12" type="button" value=""
-                                                    onclick="on('.c-12')">
-                                                <input class="circle circle-black d-12" type="button" value=""
-                                                    onclick="on('.d-12')">
-                                                <input class="circle e-12" type="button" value="" onclick="on('.e-12')">
-                                                <input class="circle f-12" type="button" value="" onclick="on('.f-12')">
-                                                <input class="circle g-12" type="button" value="" onclick="on('.g-12')">
+                                                <input class="circle circle-black" id="lvl-121" type="button" value=""
+                                                    onclick="on(12,1)">
+                                                <input class="circle circle-black" id="lvl-122" type="button" value=""
+                                                    onclick="on(12,2)">
+                                                <input class="circle circle-black" id="lvl-123" type="button" value=""
+                                                    onclick="on(12,3)">
+                                                <input class="circle circle-black" id="lvl-124" type="button" value=""
+                                                    onclick="on(12,4)">
+                                                <input class="circle" id="lvl-125" type="button" value=""
+                                                    onclick="on(12,5)">
+                                                <input class="circle" id="lvl-126" type="button" value=""
+                                                    onclick="on(12,6)">
+                                                <input class="circle" id="lvl-127" type="button" value=""
+                                                    onclick="on(12,7)">
                                             </div>
 
                                             <div class="col-6">
@@ -548,17 +583,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black a-13" type="button" value=""
-                                                    onclick="on('.a-13')">
-                                                <input class="circle circle-black b-13" type="button" value=""
-                                                    onclick="on('.b-13')">
-                                                <input class="circle circle-black c-13" type="button" value=""
-                                                    onclick="on('.c-13')">
-                                                <input class="circle circle-black d-13" type="button" value=""
-                                                    onclick="on('.d-13')">
-                                                <input class="circle e-13" type="button" value="" onclick="on('.e-13')">
-                                                <input class="circle f-13" type="button" value="" onclick="on('.f-13')">
-                                                <input class="circle g-13" type="button" value="" onclick="on('.g-13')">
+                                                <input class="circle circle-black" id="lvl-131" type="button" value=""
+                                                    onclick="on(13,1)">
+                                                <input class="circle circle-black" id="lvl-132" type="button" value=""
+                                                    onclick="on(13,2)">
+                                                <input class="circle circle-black" id="lvl-133" type="button" value=""
+                                                    onclick="on(13,3)">
+                                                <input class="circle circle-black" id="lvl-134" type="button" value=""
+                                                    onclick="on(13,4)">
+                                                <input class="circle" id="lvl-135" type="button" value=""
+                                                    onclick="on(13,5)">
+                                                <input class="circle" id="lvl-136" type="button" value=""
+                                                    onclick="on(13,6)">
+                                                <input class="circle" id="lvl-137" type="button" value=""
+                                                    onclick="on(13,7)">
                                             </div>
 
                                             <div class="col-6">
@@ -567,16 +605,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black a-14" type="button" value=""
-                                                    onclick="on('.a-14')">
-                                                <input class="circle circle-black b-14" type="button" value=""
-                                                    onclick="on('.b-14')">
-                                                <input class="circle circle-black c-14" type="button" value=""
-                                                    onclick="on('.c-14')">
-                                                <input class="circle d-14" type="button" value="" onclick="on('.d-14')">
-                                                <input class="circle e-14" type="button" value="" onclick="on('.e-14')">
-                                                <input class="circle f-14" type="button" value="" onclick="on('.f-14')">
-                                                <input class="circle g-14" type="button" value="" onclick="on('.g-14')">
+                                                <input class="circle circle-black" id="lvl-141" type="button" value=""
+                                                    onclick="on(14,1)">
+                                                <input class="circle circle-black" id="lvl-142" type="button" value=""
+                                                    onclick="on(14,2)">
+                                                <input class="circle circle-black" id="lvl-143" type="button" value=""
+                                                    onclick="on(14,3)">
+                                                <input class="circle" id="lvl-144" type="button" value=""
+                                                    onclick="on(14,4)">
+                                                <input class="circle" id="lvl-145" type="button" value=""
+                                                    onclick="on(14,5)">
+                                                <input class="circle" id="lvl-146" type="button" value=""
+                                                    onclick="on(14,6)">
+                                                <input class="circle" id="lvl-147" type="button" value=""
+                                                    onclick="on(14,7)">
                                             </div>
 
                                             <div class="col-6">
@@ -585,15 +627,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black a-15" type="button" value=""
-                                                    onclick="on('.a-15')">
-                                                <input class="circle circle-black b-15" type="button" value=""
-                                                    onclick="on('.b-15')">
-                                                <input class="circle c-15" type="button" value="" onclick="on('.c-15')">
-                                                <input class="circle d-15" type="button" value="" onclick="on('.d-15')">
-                                                <input class="circle e-15" type="button" value="" onclick="on('.e-15')">
-                                                <input class="circle f-15" type="button" value="" onclick="on('.f-15')">
-                                                <input class="circle g-15" type="button" value="" onclick="on('.g-15')">
+                                                <input class="circle circle-black" id="lvl-151" type="button" value=""
+                                                    onclick="on(15,1)">
+                                                <input class="circle circle-black" id="lvl-152" type="button" value=""
+                                                    onclick="on(15,2)">
+                                                <input class="circle" id="lvl-153" type="button" value=""
+                                                    onclick="on(15,3)">
+                                                <input class="circle" id="lvl-154" type="button" value=""
+                                                    onclick="on(15,4)">
+                                                <input class="circle" id="lvl-155" type="button" value=""
+                                                    onclick="on(15,5)">
+                                                <input class="circle" id="lvl-156" type="button" value=""
+                                                    onclick="on(15,6)">
+                                                <input class="circle" id="lvl-157" type="button" value=""
+                                                    onclick="on(15,7)">
                                             </div>
 
                                             <div class="col-6">
@@ -602,17 +649,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black a-16" type="button" value=""
-                                                    onclick="on('.a-16')">
-                                                <input class="circle circle-black b-16" type="button" value=""
-                                                    onclick="on('.b-16')">
-                                                <input class="circle circle-black c-16" type="button" value=""
-                                                    onclick="on('.c-16')">
-                                                <input class="circle circle-black d-16" type="button" value=""
-                                                    onclick="on('.d-16')">
-                                                <input class="circle e-16" type="button" value="" onclick="on('.e-16')">
-                                                <input class="circle f-16" type="button" value="" onclick="on('.f-16')">
-                                                <input class="circle g-16" type="button" value="" onclick="on('.g-16')">
+                                                <input class="circle circle-black" id="lvl-161" type="button" value=""
+                                                    onclick="on(16,1)">
+                                                <input class="circle circle-black" id="lvl-162" type="button" value=""
+                                                    onclick="on(16,2)">
+                                                <input class="circle circle-black" id="lvl-163" type="button" value=""
+                                                    onclick="on(16,3)">
+                                                <input class="circle circle-black" id="lvl-164" type="button" value=""
+                                                    onclick="on(16,4)">
+                                                <input class="circle" id="lvl-165" type="button" value=""
+                                                    onclick="on(16,5)">
+                                                <input class="circle" id="lvl-166" type="button" value=""
+                                                    onclick="on(16,6)">
+                                                <input class="circle" id="lvl-167" type="button" value=""
+                                                    onclick="on(16,7)">
                                             </div>
 
                                             <div class="col-6">
@@ -621,16 +671,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black a-17" type="button" value=""
-                                                    onclick="on('.a-17')">
-                                                <input class="circle circle-black b-17" type="button" value=""
-                                                    onclick="on('.b-17')">
-                                                <input class="circle circle-black c-17" type="button" value=""
-                                                    onclick="on('.c-17')">
-                                                <input class="circle d-17" type="button" value="" onclick="on('.d-17')">
-                                                <input class="circle e-17" type="button" value="" onclick="on('.e-17')">
-                                                <input class="circle f-17" type="button" value="" onclick="on('.f-17')">
-                                                <input class="circle g-17" type="button" value="" onclick="on('.g-17')">
+                                                <input class="circle circle-black" id="lvl-171" type="button" value=""
+                                                    onclick="on(17,1)">
+                                                <input class="circle circle-black" id="lvl-172" type="button" value=""
+                                                    onclick="on(17,2)">
+                                                <input class="circle circle-black" id="lvl-173" type="button" value=""
+                                                    onclick="on(17,3)">
+                                                <input class="circle" id="lvl-174" type="button" value=""
+                                                    onclick="on(17,4)">
+                                                <input class="circle" id="lvl-175" type="button" value=""
+                                                    onclick="on(17,5)">
+                                                <input class="circle" id="lvl-176" type="button" value=""
+                                                    onclick="on(17,6)">
+                                                <input class="circle" id="lvl-177" type="button" value=""
+                                                    onclick="on(17,7)">
                                             </div>
 
                                             <div class="col-6">
@@ -639,18 +693,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black a-18" type="button" value=""
-                                                    onclick="on('.a-18')">
-                                                <input class="circle circle-black b-18" type="button" value=""
-                                                    onclick="on('.b-18')">
-                                                <input class="circle circle-black c-18" type="button" value=""
-                                                    onclick="on('.c-18')">
-                                                <input class="circle circle-black d-18" type="button" value=""
-                                                    onclick="on('.d-18')">
-                                                <input class="circle circle-black e-18" type="button" value=""
-                                                    onclick="on('.e-18')">
-                                                <input class="circle f-18" type="button" value="" onclick="on('.f-18')">
-                                                <input class="circle g-18" type="button" value="" onclick="on('.g-18')">
+                                                <input class="circle circle-black" id="lvl-181" type="button" value=""
+                                                    onclick="on(18,1)">
+                                                <input class="circle circle-black" id="lvl-182" type="button" value=""
+                                                    onclick="on(18,2)">
+                                                <input class="circle circle-black" id="lvl-183" type="button" value=""
+                                                    onclick="on(18,3)">
+                                                <input class="circle circle-black" id="lvl-184" type="button" value=""
+                                                    onclick="on(18,4)">
+                                                <input class="circle circle-black" id="lvl-185" type="button" value=""
+                                                    onclick="on(18,5)">
+                                                <input class="circle" id="lvl-186" type="button" value=""
+                                                    onclick="on(18,6)">
+                                                <input class="circle" id="lvl-187" type="button" value=""
+                                                    onclick="on(18,7)">
                                             </div>
                                         </div>
                                     </div>
@@ -666,19 +722,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black aa-1" type="button" value=""
-                                                    onclick="on('.aa-1')">
-                                                <input class="circle circle-black ab-1" type="button" value=""
-                                                    onclick="on('.ab-1')">
-                                                <input class="circle circle-black ac-1" type="button" value=""
-                                                    onclick="on('.ac-1')">
-                                                <input class="circle circle-black ad-1" type="button" value=""
-                                                    onclick="on('.ad-1')">
-                                                <input class="circle circle-black ae-1" type="button" value=""
-                                                    onclick="on('.ae-1')">
-                                                <input class="circle circle-black af-1" type="button" value=""
-                                                    onclick="on('.af-1')">
-                                                <input class="circle ag-1" type="button" value="" onclick="on('.ag-1')">
+                                                <input class="circle circle-black" id="lvl-191" type="button" value=""
+                                                    onclick="on(19,1)">
+                                                <input class="circle circle-black" id="lvl-192" type="button" value=""
+                                                    onclick="on(19,2)">
+                                                <input class="circle circle-black" id="lvl-193" type="button" value=""
+                                                    onclick="on(19,3)">
+                                                <input class="circle circle-black" id="lvl-194" type="button" value=""
+                                                    onclick="on(19,4)">
+                                                <input class="circle circle-black" id="lvl-195" type="button" value=""
+                                                    onclick="on(19,5)">
+                                                <input class="circle circle-black" id="lvl-196" type="button" value=""
+                                                    onclick="on(19,6)">
+                                                <input class="circle" id="lvl-197" type="button" value=""
+                                                    onclick="on(19,7)">
                                             </div>
 
                                             <div class="col-6">
@@ -687,19 +744,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black aa-2" type="button" value=""
-                                                    onclick="on('.aa-2')">
-                                                <input class="circle circle-black ab-2" type="button" value=""
-                                                    onclick="on('.ab-2')">
-                                                <input class="circle circle-black ac-2" type="button" value=""
-                                                    onclick="on('.ac-2')">
-                                                <input class="circle circle-black ad-2" type="button" value=""
-                                                    onclick="on('.ad-2')">
-                                                <input class="circle circle-black ae-2" type="button" value=""
-                                                    onclick="on('.ae-2')">
-                                                <input class="circle circle-black af-2" type="button" value=""
-                                                    onclick="on('.af-2')">
-                                                <input class="circle ag-2" type="button" value="" onclick="on('.ag-2')">
+                                                <input class="circle circle-black" id="lvl-201" type="button" value=""
+                                                    onclick="on(20,1)">
+                                                <input class="circle circle-black" id="lvl-202" type="button" value=""
+                                                    onclick="on(20,2)">
+                                                <input class="circle circle-black" id="lvl-203" type="button" value=""
+                                                    onclick="on(20,3)">
+                                                <input class="circle circle-black" id="lvl-204" type="button" value=""
+                                                    onclick="on(20,4)">
+                                                <input class="circle circle-black" id="lvl-205" type="button" value=""
+                                                    onclick="on(20,5)">
+                                                <input class="circle circle-black" id="lvl-206" type="button" value=""
+                                                    onclick="on(20,6)">
+                                                <input class="circle" id="lvl-207" type="button" value=""
+                                                    onclick="on(20,7)">
                                             </div>
 
                                             <div class="col-6">
@@ -708,19 +766,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black aa-3" type="button" value=""
-                                                    onclick="on('.aa-3')">
-                                                <input class="circle circle-black ab-3" type="button" value=""
-                                                    onclick="on('.ab-3')">
-                                                <input class="circle circle-black ac-3" type="button" value=""
-                                                    onclick="on('.ac-3')">
-                                                <input class="circle circle-black ad-3" type="button" value=""
-                                                    onclick="on('.ad-3')">
-                                                <input class="circle circle-black ae-3" type="button" value=""
-                                                    onclick="on('.ae-3')">
-                                                <input class="circle circle-black af-3" type="button" value=""
-                                                    onclick="on('.af-3')">
-                                                <input class="circle ag-3" type="button" value="" onclick="on('.ag-3')">
+                                                <input class="circle circle-black" id="lvl-211" type="button" value=""
+                                                    onclick="on(21,1)">
+                                                <input class="circle circle-black" id="lvl-212" type="button" value=""
+                                                    onclick="on(21,2)">
+                                                <input class="circle circle-black" id="lvl-213" type="button" value=""
+                                                    onclick="on(21,3)">
+                                                <input class="circle circle-black" id="lvl-214" type="button" value=""
+                                                    onclick="on(21,4)">
+                                                <input class="circle circle-black" id="lvl-215" type="button" value=""
+                                                    onclick="on(21,5)">
+                                                <input class="circle circle-black" id="lvl-216" type="button" value=""
+                                                    onclick="on(21,6)">
+                                                <input class="circle" id="lvl-217" type="button" value=""
+                                                    onclick="on(21,7)">
                                             </div>
 
                                             <div class="col-6">
@@ -729,18 +788,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black aa-4" type="button" value=""
-                                                    onclick="on('.aa-4')">
-                                                <input class="circle circle-black ab-4" type="button" value=""
-                                                    onclick="on('.ab-4')">
-                                                <input class="circle circle-black ac-4" type="button" value=""
-                                                    onclick="on('.ac-4')">
-                                                <input class="circle circle-black ad-4" type="button" value=""
-                                                    onclick="on('.ad-4')">
-                                                <input class="circle circle-black ae-4" type="button" value=""
-                                                    onclick="on('.ae-4')">
-                                                <input class="circle af-4" type="button" value="" onclick="on('.af-4')">
-                                                <input class="circle ag-4" type="button" value="" onclick="on('.ag-4')">
+                                                <input class="circle circle-black" id="lvl-221" type="button" value=""
+                                                    onclick="on(22,1)">
+                                                <input class="circle circle-black" id="lvl-222" type="button" value=""
+                                                    onclick="on(22,2)">
+                                                <input class="circle circle-black" id="lvl-223" type="button" value=""
+                                                    onclick="on(22,3)">
+                                                <input class="circle circle-black" id="lvl-224" type="button" value=""
+                                                    onclick="on(22,4)">
+                                                <input class="circle circle-black" id="lvl-225" type="button" value=""
+                                                    onclick="on(22,5)">
+                                                <input class="circle" id="lvl-226" type="button" value=""
+                                                    onclick="on(22,6)">
+                                                <input class="circle" id="lvl-227" type="button" value=""
+                                                    onclick="on(22,7)">
                                             </div>
 
 
@@ -754,17 +815,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black aa-5" type="button" value=""
-                                                    onclick="on('.aa-5')">
-                                                <input class="circle circle-black ab-5" type="button" value=""
-                                                    onclick="on('.ab-5')">
-                                                <input class="circle circle-black ac-5" type="button" value=""
-                                                    onclick="on('.ac-5')">
-                                                <input class="circle circle-black ad-5" type="button" value=""
-                                                    onclick="on('.ad-5')">
-                                                <input class="circle ae-5" type="button" value="" onclick="on('.ae-5')">
-                                                <input class="circle af-5" type="button" value="" onclick="on('.af-5')">
-                                                <input class="circle ag-5" type="button" value="" onclick="on('.ag-5')">
+                                                <input class="circle circle-black" id="lvl-231" type="button" value=""
+                                                    onclick="on(23,1)">
+                                                <input class="circle circle-black" id="lvl-232" type="button" value=""
+                                                    onclick="on(23,2)">
+                                                <input class="circle circle-black" id="lvl-233" type="button" value=""
+                                                    onclick="on(23,3)">
+                                                <input class="circle circle-black" id="lvl-234" type="button" value=""
+                                                    onclick="on(23,4)">
+                                                <input class="circle" id="lvl-235" type="button" value=""
+                                                    onclick="on(23,5)">
+                                                <input class="circle" id="lvl-236" type="button" value=""
+                                                    onclick="on(23,6)">
+                                                <input class="circle" id="lvl-237" type="button" value=""
+                                                    onclick="on(23,7)">
                                             </div>
 
                                             <div class="col-6">
@@ -773,17 +837,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black aa-6" type="button" value=""
-                                                    onclick="on('.aa-6')">
-                                                <input class="circle circle-black ab-6" type="button" value=""
-                                                    onclick="on('.ab-6')">
-                                                <input class="circle circle-black ac-6" type="button" value=""
-                                                    onclick="on('.ac-6')">
-                                                <input class="circle circle-black ad-6" type="button" value=""
-                                                    onclick="on('.ad-6')">
-                                                <input class="circle ae-6" type="button" value="" onclick="on('.ae-6')">
-                                                <input class="circle af-6" type="button" value="" onclick="on('.af-6')">
-                                                <input class="circle ag-6" type="button" value="" onclick="on('.ag-6')">
+                                                <input class="circle circle-black" id="lvl-241" type="button" value=""
+                                                    onclick="on(24,1)">
+                                                <input class="circle circle-black" id="lvl-242" type="button" value=""
+                                                    onclick="on(24,2)">
+                                                <input class="circle circle-black" id="lvl-243" type="button" value=""
+                                                    onclick="on(24,3)">
+                                                <input class="circle circle-black" id="lvl-244" type="button" value=""
+                                                    onclick="on(24,4)">
+                                                <input class="circle" id="lvl-245" type="button" value=""
+                                                    onclick="on(24,5)">
+                                                <input class="circle" id="lvl-246" type="button" value=""
+                                                    onclick="on(24,6)">
+                                                <input class="circle" id="lvl-247" type="button" value=""
+                                                    onclick="on(24,7)">
                                             </div>
 
                                             <div class="col-6">
@@ -792,18 +859,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black aa-7" type="button" value=""
-                                                    onclick="on('.aa-7')">
-                                                <input class="circle circle-black ab-7" type="button" value=""
-                                                    onclick="on('.ab-7')">
-                                                <input class="circle circle-black ac-7" type="button" value=""
-                                                    onclick="on('.ac-7')">
-                                                <input class="circle circle-black ad-7" type="button" value=""
-                                                    onclick="on('.ad-7')">
-                                                <input class="circle circle-black ae-7" type="button" value=""
-                                                    onclick="on('.ae-7')">
-                                                <input class="circle af-7" type="button" value="" onclick="on('.af-7')">
-                                                <input class="circle ag-7" type="button" value="" onclick="on('.ag-7')">
+                                                <input class="circle circle-black" id="lvl-251" type="button" value=""
+                                                    onclick="on(25,1)">
+                                                <input class="circle circle-black" id="lvl-252" type="button" value=""
+                                                    onclick="on(25,2)">
+                                                <input class="circle circle-black" id="lvl-253" type="button" value=""
+                                                    onclick="on(25,3)">
+                                                <input class="circle circle-black" id="lvl-254" type="button" value=""
+                                                    onclick="on(25,4)">
+                                                <input class="circle circle-black" id="lvl-255" type="button" value=""
+                                                    onclick="on(25,5)">
+                                                <input class="circle" id="lvl-256" type="button" value=""
+                                                    onclick="on(25,6)">
+                                                <input class="circle" id="lvl-257" type="button" value=""
+                                                    onclick="on(25,7)">
                                             </div>
 
                                             <div class="col-6">
@@ -812,17 +881,20 @@
                                                 </p>
                                             </div>
                                             <div class="col-6 skill-indicator">
-                                                <input class="circle circle-black aa-8" type="button" value=""
-                                                    onclick="on('.aa-8')">
-                                                <input class="circle circle-black ab-8" type="button" value=""
-                                                    onclick="on('.ab-8')">
-                                                <input class="circle circle-black ac-8" type="button" value=""
-                                                    onclick="on('.ac-8')">
-                                                <input class="circle circle-black ad-8" type="button" value=""
-                                                    onclick="on('.ad-8')">
-                                                <input class="circle ae-8" type="button" value="" onclick="on('.ae-8')">
-                                                <input class="circle af-8" type="button" value="" onclick="on('.af-8')">
-                                                <input class="circle ag-8" type="button" value="" onclick="on('.ag-8')">
+                                                <input class="circle circle-black" id="lvl-261" type="button" value=""
+                                                    onclick="on(26,1)">
+                                                <input class="circle circle-black" id="lvl-262" type="button" value=""
+                                                    onclick="on(26,2)">
+                                                <input class="circle circle-black" id="lvl-263" type="button" value=""
+                                                    onclick="on(26,3)">
+                                                <input class="circle circle-black" id="lvl-264" type="button" value=""
+                                                    onclick="on(26,4)">
+                                                <input class="circle" id="lvl-265" type="button" value=""
+                                                    onclick="on(26,5)">
+                                                <input class="circle" id="lvl-266" type="button" value=""
+                                                    onclick="on(26,6)">
+                                                <input class="circle" id="lvl-267" type="button" value=""
+                                                    onclick="on(26,7)">
                                             </div>
                                         </div>
                                     </div>
@@ -839,23 +911,25 @@
         </section>
     </div>
 
+    <div id="other"></div>
+
     <div class="form d-flex justify-content-center">
-        <form action="" onsubmit="btnClick(event)">
+        <form action="" onsubmit="btnClick(event)" method="POST">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Nama</label>
-                <input type="text" id="name" class="form-control" placeholder="Masukan nama anda!" value="">
+                <input type="text" id="name" class="form-control" name="name" placeholder="Masukan nama anda!" value="">
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Tanggal Lahir</label>
-                <input type="date" id="date" class="form-control">
+                <input type="date" id="date" class="form-control" name="birth">
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Alamat</label>
-                <textarea id="address" class="form-control" rows="3"></textarea>
+                <textarea id="address" class="form-control" name="address" rows="3"></textarea>
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">GIT HUB</label>
-                <input type="text" id="git" class="form-control" placeholder="github.com/">
+                <input type="text" id="git" class="form-control"  name="git" placeholder="github.com/">
             </div>
             <div class="col-12 d-flex justify-content-center">
                 <button class="btn btn-primary w-75" type="submit">Submit form</button>
