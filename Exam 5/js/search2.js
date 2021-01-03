@@ -2,7 +2,7 @@ const searchData = self => {
     const valueSearch = self.value
 
 
-    const filteredData = dataPerson.filter(value => {
+    const filteredData = userList.filter(value => {
         return value.name.includes(valueSearch) || value.address.includes(valueSearch);
 
     })
@@ -10,7 +10,7 @@ const searchData = self => {
     showData(filteredData);
 }
 
-const showData = (dataShow = dataPerson) => {
+const showData = (dataShow = userList) => {
     const table = getEl("table[type=listData] tbody")
 
     const listData = dataShow.map((value, index) => {

@@ -36,7 +36,7 @@ function save() {
     localStorage.setItem('userList', JSON.stringify(userList));
 
     // showHidePage()
-    document.getElementById('form-data').reset();
+    // document.body.reset();
 }
 
 function showHidePage() {
@@ -77,50 +77,10 @@ function getSelectedAll(name) {
     return hobbies
 }
 
-// add next index
-function next() {
-    console.log("next");
-    if (currentPage == (userList.length - 1)) {
-        // currentPage = -1
-        alert("Data Terakhir!!")
-        // return
-    } else {
-        currentPage += 1
-        console.info("currentPage:", currentPage)
-        console.warn("Value:", userList[currentPage])
-
-        showData()
-    }
-}
-
-// add prev index
-async function prev() {
-    console.log("prev");
-    if (currentPage == 0) {
-        alert("Data Pertama!!")
-        return
-    }
-
-    currentPage = await currentPage - 1
-    console.info("currentPage:", currentPage)
-    console.warn("Value:", userList[currentPage])
-
-    showData()
-}
-
-function showData() {
-    let userData = userList[currentPage]
-    document.querySelector("td[type='name']").innerHTML = userData.name
-    document.querySelector("td[type='gender']").innerHTML = userData.gender
-    document.querySelector("td[type='place-birth']").innerHTML = userData["place-birth"]
-    document.querySelector("td[type='hobby']").innerHTML = userData.hobby
-    document.querySelector("td[type='address']").innerHTML = userData.address
-}
-
 function __init() {
     // pagination()
     // next()
     // prev()
-    // showData()
+    showData()
 }
 __init()
