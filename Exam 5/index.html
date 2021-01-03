@@ -21,10 +21,10 @@
         <div class="container">
             <div class="row justify-content-center formSave">
                 <div class="form d-flex justify-content-center">
-                    <form id="form-data" action="" onsubmit="saveData()" method="POST" name="inputData">
+                    <form id="form-data" onsubmit="saveData()" name="inputData">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Nama</label>
-                            <input type="text" id="name" class="form-control" name="name" placeholder="Masukan nama anda!" value="">
+                            <input type="text" id="name" class="form-control" name="name" placeholder="Masukan nama anda!">
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlTextarea1" class="form-label">Alamat</label>
@@ -57,7 +57,7 @@
                                 </label>
                             </div>
                         </div>
-                        <div class="mb-3 ">
+                        <!-- <div class="mb-3 ">
                             <label for="exampleFormControlInput1 " class="form-label ">Hobby</label>
 
                             <div class="form-check">
@@ -90,8 +90,16 @@
                                   Badminton
                                 </label>
                             </div>
-                        </div>
+                        </div> -->
 
+                        <div class="mb-3">
+                            <label class="form-label">Hobby</label>
+                            <input type="checkbox" name="hobby" value="Berenang" /> Berenang
+                            <input type="checkbox" name="hobby" value="Membaca" /> Membaca
+                            <input type="checkbox" name="hobby" value="Badminton" /> Badminton
+                            <input type="checkbox" name="hobby" value="Mendengarkan Musik" />
+                            Mendengarkan Musik
+                        </div>
                         <div class="mb-3 ">
                             <label for="exampleFormControlInput1 " class="form-label ">Agama</label>
                             <select class="form-select " id="religion" name="religion " aria-label="Default select example ">

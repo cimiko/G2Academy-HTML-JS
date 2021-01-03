@@ -3,30 +3,60 @@ id_data = 0;
 
 const saveData = () => {
     event.preventDefault()
-    nama = document.querySelector('#name').value;
-    alamat = document.querySelector('#address').value;
-    kelamin = document.querySelector(".form-check input[name='gender']:checked").value;
-    hobi = document.querySelector("input[name='hobby']:checked").value;
-    agama = document.querySelector('#religion').value;
+    // nama = document.querySelector('#name').value;
+    // alamat = document.querySelector('#address').value;
+    // kelamin = document.querySelector(".form-check input[name='gender']:checked").value;
+    // hobi = document.querySelector("input[name='hobby']:checked").value;
+    // agama = document.querySelector('#religion').value;
 
-    console.log(hobi);
+    const form = document.inputData;
 
-    id_data += 1;
+
+    // console.log(hobi);
+
+    // id_data += 1;
+    // dataPerson.push({
+    //     'id_data': id_data,
+    //     'nama': nama,
+    //     'alamat': alamat,
+    //     'kelamin': kelamin,
+    //     'hobi': hobi,
+    //     'agama': agama
+    // })
+
     dataPerson.push({
-        'id_data': id_data,
-        'nama': nama,
-        'alamat': alamat,
-        'kelamin': kelamin,
-        'hobi': hobi,
-        'agama': agama
+        name : form.name.value,
+        address : form.address.value,
+        gender : form.gender.value,
+        hobby : getSelectedAll("hobby"),
+        religion : form.religion.value
     })
 
     localStorage.setItem('dataPerson', JSON.stringify(dataPerson));
-    localStorage.setItem('id_data', id_data);
+    // localStorage.setItem('id_data', id_data);
     document.getElementById('form-data').reset();
 
     document.body.reset
     return false;
+}
+
+function getSelectedAll(name) {
+    let hobbies = ""
+    let checkedEl = document.querySelectorAll("input[name='" + name + "']:checked")
+
+    for (let index = 0; index < checkedEl.length; index++) {
+        const element = checkedEl[index];
+
+        // console.log("hobbies", hobbies);
+        /*
+        if(hobbies) hobbies += ", "
+        hobbies += element.value
+         */
+
+        hobbies += hobbies ? ", " + element.value : element.value
+    }
+    console.log(checkedEl.length);
+    return hobbies
 }
 
 const daftarData = () => {
