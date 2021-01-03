@@ -22,6 +22,8 @@ const showData = (dataShow = userList) => {
                 <td>${value.gender}</td>
                 <td>${value.hobby}</td>
                 <td>${value.religion}</td>
+                <td><button class="btn btn-danger btn-small" onclick="hapusData(${value.id_data})">Hapus</button></td>
+                <td><button class="btn btn-warning btn-small" onclick="editData(${value.id_data})">Edit</button></td>
             <tr>
         `
     })

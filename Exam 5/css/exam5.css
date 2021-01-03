@@ -7,6 +7,15 @@
     border-radius: 20px;
 }
 
+.search{
+    margin: auto;
+    margin-top: 50px;
+    padding: 10px 10px;
+    width: 300px;
+    background-color: lightgrey;
+    border-radius: 20px;
+}
+
 .hidden{
     display: none;
 }
