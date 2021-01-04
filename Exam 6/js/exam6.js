@@ -3,13 +3,6 @@ let currentPage = 0
 
 console.log(userList);
 
-// function pagination() {
-//     // console.log("params:", params);
-//     console.log("pagination");
-//     console.info("currentPage:", currentPage)
-//     console.warn("Value:", userList[currentPage])
-// }
-
 // save form
 function save() {
     event.preventDefault()
@@ -125,11 +118,3 @@ const editData = (id) => {
 
 
 }
-
-function __init() {
-    // pagination()
-    // next()
-    // prev()
-    // showData()
-}
-__init()
