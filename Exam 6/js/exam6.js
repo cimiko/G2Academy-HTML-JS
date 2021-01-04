@@ -47,6 +47,11 @@ function showHidePage() {
 
 function back() {
     showHidePage()
+    document.getElementById('form-data').reset();
+}
+
+function edit() {
+    showHidePage()
 }
 
 // get single selected
@@ -116,7 +121,7 @@ const editData = (id) => {
             idx_data++;
         }
     }
-    back();
+    edit();
 
 
 }
@@ -125,6 +130,6 @@ function __init() {
     // pagination()
     // next()
     // prev()
-    showData()
+    // showData()
 }
 __init()
