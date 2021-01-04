@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/exam51.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/exam5.css">
+    <!-- <link rel="stylesheet" href="./css/form.css"> -->
+    <script src="./js/search2.js"></script>
+</head>
+
+<body>
+    <div class="inputData">
+        <div class="d-flex justify-content-center">
+            <form name="userInput" onsubmit="save()" id="form-data">
+                <div class="mb-3">
+                    <label class="form-label">Nama</label>
+                    <input id="nama" type="text" name="name" class="form-control w-100"/>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Alamat</label>
+                    <textarea name="address" id="address" class="form-control"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Jenis Kelamin</label>
+                    <input type="radio" name="gender" value="Laki-laki" /> Laki-laki
+                    <input type="radio" name="gender" value="Perempuan" /> Perempuan
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Hobby</label>
+                    <input type="checkbox" name="hobby" value="Berenang" /> Berenang
+                    <input type="checkbox" name="hobby" value="Membaca" /> Membaca
+                    <input type="checkbox" name="hobby" value="Badminton" /> Badminton
+                    <input type="checkbox" name="hobby" value="Mendengarkan Musik" />
+                    Mendengarkan Musik
+                </div>
+                <div class="mb-3 ">
+                    <label for="exampleFormControlInput1 " class="form-label ">Agama</label>
+                    <select class="form-select" name="religion" aria-label="Default select example ">
+                        <option selected>Choose your religion...</option>
+                        <option value="buddha">Buddha</option>
+                        <option value="hindu">Hindu</option>
+                        <option value="islam">Islam</option>
+                        <option value="khatolik">Khatolik</option>
+                        <option value="kristen">Kristen</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary w-100" type="submit">Simpan</button>
+            </form>
+        </div>
+        <button class="btn btn-warning w-100 mt-3" onclick="showHidePage()">Show Data</button>
+    </div>
+
+    <div class="showData hidden">
+        <button class="btn btn-success" onclick="back()">Back</button>
+        <div class="search">
+            <label class="form-label">Search</label>
+            <input class="form-control" id="search" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." onkeyup="searchData(this)">
+            <datalist id="datalistOptions">
+                <option value="San Francisco">
+                <option value="New York">
+                <option value="Seattle">
+                <option value="Los Angeles">
+                <option value="Chicago">
+            </datalist>
+        </div>
+        <div class="table container" id="list-data">
+            <table class="table" type="listData">
+                <thead>
+                    <tr>
+                        <th scope="col ">No</th>
+                        <th scope="col ">Nama</th>
+                        <th scope="col ">Alamat</th>
+                        <th scope="col ">Jenis Kelamin</th>
+                        <th scope="col ">Hobby</th>
+                        <th scope="col ">Agama</th>
+                        <th scope="col " colspan="2">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

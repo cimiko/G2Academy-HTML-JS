@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV</title>
+
+    <script src="./js/cv.js" defer></script>
+    <style>
+      input[type="date"] {
+        background-color: deepskyblue;
+      }
+      .hidden {
+        display: none;
+      }
+      .pagination {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+      }
+      .pagination-button {
+        border: solid 1px lightgray;
+        padding: 5px 10px;
+        margin: 0 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="inputData hidden">
+      <form name="userInput">
+        <table>
+          <tr class="color">
+            <td class="color">Nama</td>
+            <td>:</td>
+            <td>
+              <input type="text" name="name" />
+            </td>
+          </tr>
+          <tr>
+            <td>Jenis Kelamin</td>
+            <td>:</td>
+            <td>
+              <input type="radio" name="gender" value="Laki-laki" /> Laki-laki
+              <input type="radio" name="gender" value="Perempuan" /> Perempuan
+            </td>
+          </tr>
+          <tr>
+            <td>Tempat Lahir</td>
+            <td>:</td>
+            <td>
+              <input type="text" name="place" />
+            </td>
+          </tr>
+          <tr>
+            <td>Tanggal Lahir</td>
+            <td>:</td>
+            <td>
+              <input type="date" name="dob" />
+            </td>
+          </tr>
+          <tr>
+            <td>Hobi</td>
+            <td>:</td>
+            <td>
+              <input type="checkbox" name="hobby" value="Berenang" /> Berenang
+              <input type="checkbox" name="hobby" value="Membaca" /> Membaca
+              <input type="checkbox" name="hobby" value="Badminton" /> Badminton
+              <input type="checkbox" name="hobby" value="Mendengarkan Musik" />
+              Mendengarkan Musik
+            </td>
+          </tr>
+          <tr>
+            <td>Alamat</td>
+            <td>:</td>
+            <td>
+              <textarea name="address" id="address"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3" align="center">
+              <button onclick="save()">Simpan</button>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <div class="showData">
+      <table name="listData" width="100%" border="1" cellpadding="5px">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Jenis Kelamin</th>
+            <th>Tempat Tanggal Lahir</th>
+            <th>Hobi</th>
+            <th>Alamat</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <div class="pagination">
+        <div class="pagination-button">1</div>
+        <div class="pagination-button">2</div>
+      </div>
+      <button onclick="showHidePage2()">Kembali</button>
+    </div>
+  </body>
+</html>
