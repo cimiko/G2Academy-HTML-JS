@@ -85,7 +85,7 @@ function getSelectedAll(name) {
 }
 
 const hapusData = (id) => {
-    if (localStorage.userList && localStorage.id_data) {
+    if (localStorage.userList) {
         userList = JSON.parse(localStorage.getItem('userList'));
         idx_data = 0;
         for (i in userList) {
@@ -101,7 +101,7 @@ const hapusData = (id) => {
 
 const editData = (id) => {
 
-    if (localStorage.userList && localStorage.id_data) {
+    if (localStorage.userList) {
         userList = JSON.parse(localStorage.getItem('userList'));
         let form = document.userInput
         idx_data = 0;

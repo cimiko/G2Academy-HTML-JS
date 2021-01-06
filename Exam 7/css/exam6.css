@@ -1,3 +1,7 @@
+@import url('./form.css');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css");
+
 .inputData{
     margin: auto;
     margin-top: 100px;
