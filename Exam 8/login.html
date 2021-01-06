@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200&display=swap" rel="stylesheet">
+    <!-- <script src="./js/login.js" defer></script> -->
+    <!-- <script src="./js/pagination.js"></script> -->
+    <style>
+        *,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .login-warp {
+            background-image: url("./img/parkir.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 97vh;
+            margin: 0;
+        }
+
+        .login {
+            width: 500px;
+            margin: auto;
+            margin-top: 15%;
+            background-color: lightgray;
+            padding: 50px 50px;
+            border-radius: 20px;
+        }
+
+        .login h2 {
+            text-align: center;
+        }
+
+        .login .btn {
+            margin: 10px 0px;
+        }
+
+        .register-link a {
+            text-decoration: none;
+            text-shadow: -1px 1px grey;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-warp">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active" aria-current="page"><small>version 1.0</small></li>
+            </ol>
+        </nav>
+        <div class="row">
+            <div class="col-6"></div>
+            <div class="col-6">
+                <div class="login">
+                    <h2>My Parking</h2>
+                    <form name="loginForm">
+                        <div class="row mb-3">
+                            <label class="col-sm-12 col-form-label">Username</label>
+                            <div class="col-sm-12">
+                                <input type="text" name="username" class="form-control" id="username">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label class="col-sm-12 col-form-label">Password</label>
+                            <div class="col-sm-12">
+                                <input type="password" name="password" class="form-control" id="password">
+                            </div>
+                        </div>
+                        <div class="form-text">Don't have an account? let's <span class="register-link"><a
+                                    href="#">Register</a></span> first!</div>
+                        <button type="button" class="btn btn-primary w-100" onclick="validate()" id="submit">Sign
+                            in</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

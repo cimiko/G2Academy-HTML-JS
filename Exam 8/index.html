@@ -1,13 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gate-In Parking</title>
     <script src="./js/exam8.js" defer></script>
+    <script src="./js/pagination.js" defer></script>
     <link rel="stylesheet" href="./css/exam8.css">
+    <style>
+        .background {
+            background-image: url("./img/parkir.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 97vh;
+            margin: 0;
+        }
+
+        .gate-in {
+            width: 500px;
+            margin: auto;
+            margin-top: 10%;
+            background-color: lightgray;
+            padding: 50px 50px;
+            border-radius: 20px;
+        }
+
+        .gate-in h2 {
+            text-align: center;
+        }
+    </style>
 </head>
-<body>
-    
+
+<body onload="getTime()">
+    <section>
+        <div class="background">
+            <header>
+                <nav class="navbar navbar-light">
+                    <div class="container-fluid">
+                        <span class="navbar-brand mb-0 h1 text-light">My Parking</span>
+                    </div>
+                </nav>
+            </header>
+
+            <main>
+                <div class="container">
+                    <div class="gate-in">
+                        <h2>My Parking</h2>
+                        <form name="gateInForm" onsubmit="gateInSave()">
+                            <div class="row mb-3">
+                                <label class="col-sm-12 col-form-label">Jenis Kendaraan</label>
+                                <div class="col-sm-12">
+                                    <select class="form-select" name="vehicle" aria-label="Default select example">
+                                        <option selected>Select the vehicle type!</option>
+                                        <option value="mobil">Mobil</option>
+                                        <option value="motor">Motor</option>
+                                      </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-6">
+                                    <label class="col-sm-12 col-form-label">Date</label>
+                                    <div class="col-sm-12">
+                                        <input type="date" name="date" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <label class="col-sm-12 col-form-label">Time</label>
+                                    <div class="col-sm-12">
+                                        <input type="time" name="time" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100" id="submit">Gate In</button>
+                            <button type="button" class="btn btn-success w-100 mt-2" onclick="">Show Data</button>
+                        </form>
+                    </div>
+
+                    <div class="showData hidden">
+                        <button class="btn btn-success" onclick="back()">Back</button>
+                        <!-- <button class="btn btn-success" onclick="dataDummy()">Go</button> -->
+                        <div class="container show-table">
+                            <div class="search">
+                                <label class="form-label">Search</label>
+                                <input class="form-control" id="search" list="datalistOptions" id="exampleDataList"
+                                    placeholder="Type to search..." onkeyup="searchData(this)">
+                                <datalist id="datalistOptions">
+                                    <option value="San Francisco">
+                                    <option value="New York">
+                                    <option value="Seattle">
+                                    <option value="Los Angeles">
+                                    <option value="Chicago">
+                                </datalist>
+                            </div>
+                            <div class="container" id="list-data">
+                                <table class="table" type="listData">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col ">No</th>
+                                            <th scope="col ">Nama</th>
+                                            <th scope="col ">Alamat</th>
+                                            <th scope="col ">Jenis Kelamin</th>
+                                            <th scope="col ">Hobby</th>
+                                            <th scope="col ">Agama</th>
+                                            <th scope="col " colspan="2">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                
+                        <div class="page">
+                            <nav aria-label="Page navigation example">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+            </main>
+
+            <footer>
+
+            </footer>
+
+        </div>
+    </section>
 </body>
+
 </html>

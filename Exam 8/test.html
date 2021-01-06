@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/exam6.css">
+    <script src="./js/exam7.js" defer></script>
+    <script src="./js/search7.js" defer></script>
+    <script src="./js/pagination.js" defer></script>
+    <script src="./js/logout.js" defer></script>
+
+</head>
+
+<body onload="checkLoginAdmin()">
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="nav"></div>
+            <input type="button" class="btn btn-danger" value="Log-out" onclick="logout()">
+        </div>
+    </nav>
+    <div class="inputData">
+        <div class="d-flex justify-content-center">
+            <form name="userInput" onsubmit="save()" id="form-data">
+                <div class="mb-3">
+                    <label class="form-label">Nama</label>
+                    <input id="nama" type="text" name="name" class="form-control w-100" />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Alamat</label>
+                    <textarea name="address" id="address" class="form-control"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Jenis Kelamin</label>
+                    <input type="radio" name="gender" value="Laki-laki" /> Laki-laki
+                    <input type="radio" name="gender" value="Perempuan" /> Perempuan
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Hobby</label>
+                    <input type="checkbox" name="hobby" value="Berenang" /> Berenang
+                    <input type="checkbox" name="hobby" value="Membaca" /> Membaca
+                    <input type="checkbox" name="hobby" value="Badminton" /> Badminton
+                    <input type="checkbox" name="hobby" value="Mendengarkan Musik" />
+                    Mendengarkan Musik
+                </div>
+                <div class="mb-3 ">
+                    <label for="exampleFormControlInput1 " class="form-label ">Agama</label>
+                    <select class="form-select" name="religion" aria-label="Default select example ">
+                        <option selected>Choose your religion...</option>
+                        <option value="buddha">Buddha</option>
+                        <option value="hindu">Hindu</option>
+                        <option value="islam">Islam</option>
+                        <option value="khatolik">Khatolik</option>
+                        <option value="kristen">Kristen</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary w-100" type="submit">Simpan</button>
+            </form>
+        </div>
+        <button class="btn btn-warning w-100 mt-3" onclick="showHidePage()">Show Data</button>
+    </div>
+
+    <div class="showData hidden">
+        <button class="btn btn-success" onclick="back()">Back</button>
+        <!-- <button class="btn btn-success" onclick="dataDummy()">Go</button> -->
+        <div class="container show-table">
+            <div class="search">
+                <label class="form-label">Search</label>
+                <input class="form-control" id="search" list="datalistOptions" id="exampleDataList"
+                    placeholder="Type to search..." onkeyup="searchData(this)">
+                <datalist id="datalistOptions">
+                    <option value="San Francisco">
+                    <option value="New York">
+                    <option value="Seattle">
+                    <option value="Los Angeles">
+                    <option value="Chicago">
+                </datalist>
+            </div>
+            <div class="container" id="list-data">
+                <table class="table" type="listData">
+                    <thead>
+                        <tr>
+                            <th scope="col ">No</th>
+                            <th scope="col ">Nama</th>
+                            <th scope="col ">Alamat</th>
+                            <th scope="col ">Jenis Kelamin</th>
+                            <th scope="col ">Hobby</th>
+                            <th scope="col ">Agama</th>
+                            <th scope="col " colspan="2">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="page">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</body>
+
+</html>
