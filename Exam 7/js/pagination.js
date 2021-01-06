@@ -49,7 +49,7 @@ function renderPagination(page) {
     } else if (page + devided > totalButtonPage) {
         startButtonPage = totalButtonPage + 1 - maxButtonPage
         endButtonPage = totalButtonPage
-    } else {
+    }else{
         startButtonPage = page - devided
         endButtonPage = page + devided
     }
