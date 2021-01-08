@@ -23,7 +23,3 @@ function tableHtmlToExcel(tableID, filename = '') {
         downloadLink.click();
     }
 }
-
-function test(){
-    new TableExport(document.getElementById("test"));
-}
