@@ -1,10 +1,11 @@
 let parkingList = []; 
 let gen = ["a","b","c","d","e","f","g","h"]
-let date = new Date();
+// let date = new Date();
 let form = document.gateInForm
 
 
 const getDate = () => {
+    let date = new Date();
     let hari = String(date.getDate()).padStart(2, '0');
     let bulan = String(date.getMonth()+1).padStart(2, '0');
     let tahun = date.getFullYear();
@@ -18,18 +19,26 @@ const getDate = () => {
 }
 
 const getTime = () => {
+    let date = new Date();
     let hours = String(date.getHours()).padStart(2, '0');
     let minute = String(date.getMinutes()).padStart(2, '0');
     let seconds = String(date.getSeconds()).padStart(2, '0');
     // let miliSec = date.getMilliseconds()
+    display_c();
 
     return form.time.setAttribute("value", `${hours}:${minute}:${seconds}`);
+    showData()
+}
+
+function display_c() {
+    var refresh = 1000; // Refresh rate in milli seconds
+    mytime = setTimeout('getTime()', refresh)
 }
 
 const gateInSave = () => {
-    // event.preventDefault()
+    event.preventDefault()
     
-
+    let date = new Date();
     let hours = String(date.getHours()).padStart(2, '0');
     let minute = String(date.getMinutes()).padStart(2, '0');
     let seconds = String(date.getSeconds()).padStart(2, '0');
@@ -46,20 +55,30 @@ const gateInSave = () => {
     parkingList.push(parkData);
     localStorage.setItem('parkingList', JSON.stringify(parkingList));
 
-    // showData();
+    showData();
     form.reset();
 }
 
-console.log(getDate());
-console.log(getTime());
-
-const test = () => {
-    event.preventDefault();
-    let date =  form.date.value
-    let time = form.time.value
-    let car = form.vehicle.value
-    
-    console.log(date);
-    console.log(time);
-    console.log(car);
+function showHidePage() {
+    document.querySelector(".gate-in").classList.toggle("hidden")
+    document.querySelector(".showData").classList.toggle("hidden")
 }
+
+function back() {
+    showHidePage()
+    // document.getElementById('form-data').reset();
+}
+
+// console.log(getDate());
+// console.log(getTime());
+
+// const test = () => {
+//     event.preventDefault();
+//     let date =  form.date.value
+//     let time = form.time.value
+//     let car = form.vehicle.value
+    
+//     console.log(date);
+//     console.log(time);
+//     console.log(car);
+// }

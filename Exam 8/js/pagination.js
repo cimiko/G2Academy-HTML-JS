@@ -1,11 +1,13 @@
-let rowPerPage = 2;
+let rowPerPage = 5;
 let maxButtonPage = 3;
+let park = JSON.parse(localStorage.getItem('parkingList'));
+console.log(park.length);
 
 function showData(page = 1) {
     const tbody = document.querySelector("table[type='listData'] tbody")
     const startLoop = (page - 1) * rowPerPage;
     const totalData = startLoop + rowPerPage;
-    const endLoop = totalData > userList.length ? userList.length : totalData
+    const endLoop = totalData > park.length ? park.length : totalData
     console.log(rowPerPage);
 
     /**
@@ -16,24 +18,21 @@ function showData(page = 1) {
 
     let tr = ""
     for (let index = startLoop; index < endLoop; index++) {
-        const user = userList[index];
+        const user = park[index];
 
         tr += `
             <tr>
                 <td>${index + 1}</td>
-                <td>${user.name}</td>
-                <td>${user.address}</td>
-                <td>${user.gender}</td>
-                <td>${user.hobby}</td>
-                <td>${user.religion}</td>
-                <td><button class="btn btn-danger btn-small" onclick="hapusData(${user.id_data})">Hapus</button></td>
-                <td><button class="btn btn-warning btn-small" onclick="editData(${user.id_data})">Edit</button></td>
+                <td>${user.code}</td>
+                <td>${user.vehicle}</td>
+                <td>${user.date}</td>
+                <td>${user.time}</td>
             </tr>
         `
     }
     tbody.innerHTML = tr
 
-    renderPagination(page)
+    // renderPagination(page)
 }
 
 function renderPagination(page) {
@@ -42,7 +41,7 @@ function renderPagination(page) {
     const devided = Math.floor(maxButtonPage / 2)
     let startButtonPage = 1
     let endButtonPage = maxButtonPage
-    let totalButtonPage = Math.ceil(userList.length / rowPerPage)
+    let totalButtonPage = Math.ceil(park.length / rowPerPage)
 
     if (page == 1 || page - devided < 1) {
 
