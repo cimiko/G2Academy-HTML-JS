@@ -4,35 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gate-In Parking</title>
-    <script src="./js/exam8.js" defer></script>
+    <title>Gate-Out Parking</title>
+    <script src="./js/getOut.js" defer></script>
     <script src="./js/exportExcel.js" defer></script>
-    <!-- <script src="./js/pagination.js" defer></script> -->
     <link rel="stylesheet" href="./css/exam8.css">
     <style>
         .background {
             background-image: url("./img/parkir.jpg");
             background-size: cover;
             background-repeat: no-repeat;
+            background-attachment: fixed;
             height: 97vh;
             margin: 0;
         }
 
-        .gate-in {
-            width: 500px;
+        .gateOutPage {
+            width: 1000px;
             margin: auto;
-            margin-top: 10%;
+            margin-top: 5%;
             background-color: lightgray;
             padding: 50px 50px;
             border-radius: 20px;
         }
 
-        .gate-in h2 {
+        .gate-in, .gateOutPage h2 {
             text-align: center;
         }
 
         .showData {
-
             background-color: lightgray;
         }
 
@@ -111,34 +110,63 @@
 
             <main>
                 <div class="container">
-                    <div class="gate-in">
+                    <div class="gateOutPage">
                         <h2>My Parking</h2>
-                        <form name="gateInForm" onsubmit="gateInSave()">
+                        <form name="gateOutForm" onsubmit="gateOutSave()">
                             <div class="row mb-3">
-                                <label class="col-sm-12 col-form-label">Jenis Kendaraan</label>
-                                <div class="col-sm-12">
-                                    <select class="form-select" name="vehicle" aria-label="Default select example">
-                                        <option selected>Select the vehicle type!</option>
-                                        <option value="mobil">Mobil</option>
-                                        <option value="motor">Motor</option>
-                                    </select>
+                                <div class="col-6">
+                                    <label class="col-sm-12 col-form-label">Code Parking</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" name="code" class="form-control" onkeyup="find(this)">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <label class="col-sm-12 col-form-label">Jenis Kendaraan</label>
+                                    <div class="col-sm-12">
+                                        <input type="text" name="kendaraan" class="form-control" disabled>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-6">
-                                    <label class="col-sm-12 col-form-label">Date</label>
-                                    <div class="col-sm-12">
-                                        <input type="date" name="date" class="form-control" disabled>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label class="col-sm-12 col-form-label">Date-In</label>
+                                            <div class="col-sm-12">
+                                                <input type="date" name="dateIn" class="form-control" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="col-sm-12 col-form-label">Time-In</label>
+                                            <div class="col-sm-12">
+                                                <input type="time" name="timeIn" class="form-control" disabled>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label class="col-sm-12 col-form-label">Date-Out</label>
+                                            <div class="col-sm-12">
+                                                <input type="date" name="dateOut" class="form-control" disabled>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <label class="col-sm-12 col-form-label">Time-Out</label>
+                                            <div class="col-sm-12">
+                                                <input type="time" name="timeOut" class="form-control" disabled>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-6">
-                                    <label class="col-sm-12 col-form-label">Time</label>
+                                    <label class="col-sm-12 col-form-label">Harga</label>
                                     <div class="col-sm-12">
-                                        <input type="time" name="time" class="form-control" disabled>
+                                        <input type="text" name="price" class="form-control hidden" disabled>
+                                        <h1 id="priceTotal" style="font-size: 70px;"></h1>
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-primary w-100" id="submit">Gate In</button>
+                            <button type="submit" class="btn btn-primary w-100" id="submit">Gate Out</button>
                             <button type="button" class="btn btn-success w-100 mt-2" onclick="showHidePage()">Show
                                 Data</button>
                         </form>
@@ -163,12 +191,27 @@
                                 <tr>
                                     <td>Date-In</td>
                                     <td>:</td>
-                                    <td type="date"></td>
+                                    <td type="dateIn"></td>
                                 </tr>
                                 <tr>
                                     <td>Time-In</td>
                                     <td>:</td>
-                                    <td type="time"></td>
+                                    <td type="timeIn"></td>
+                                </tr>
+                                <tr>
+                                    <td>Date-Out</td>
+                                    <td>:</td>
+                                    <td type="dateOut"></td>
+                                </tr>
+                                <tr>
+                                    <td>Time-Out</td>
+                                    <td>:</td>
+                                    <td type="timeOut"></td>
+                                </tr>
+                                <tr>
+                                    <td>Price</td>
+                                    <td>:</td>
+                                    <td type="price"></td>
                                 </tr>
                             </table>
                         </div>
@@ -199,8 +242,11 @@
                                             <th scope="col ">No</th>
                                             <th scope="col ">Code</th>
                                             <th scope="col ">Vehicle</th>
-                                            <th scope="col ">Date</th>
-                                            <th scope="col ">Time</th>
+                                            <th scope="col ">DateIn</th>
+                                            <th scope="col ">Timein</th>
+                                            <th scope="col ">DateOut</th>
+                                            <th scope="col ">TimeOut</th>
+                                            <th scope="col ">Price</th>
                                         </tr>
                                     </thead>
                                     <tbody>
