@@ -7,7 +7,7 @@
     <title>Gate-In Parking</title>
     <script src="./js/exam8.js" defer></script>
     <script src="./js/exportExcel.js" defer></script>
-    <!-- <script src="./js/pagination.js" defer></script> -->
+    <script src="./js/logout.js" defer></script>
     <link rel="stylesheet" href="./css/exam8.css">
     <style>
         .background {
@@ -98,13 +98,14 @@
     </style>
 </head>
 
-<body onload="getTime(), getDate()" ;>
+<body onload="getTime(), getDate(), checkLoginAdmin()" ;>
     <section>
         <div class="background">
             <header>
                 <nav class="navbar navbar-light">
                     <div class="container-fluid">
                         <span class="navbar-brand mb-0 h1 text-light">My Parking</span>
+                        <input type="button" class="btn btn-danger" value="Log-out" onclick="logout()">
                     </div>
                 </nav>
             </header>
