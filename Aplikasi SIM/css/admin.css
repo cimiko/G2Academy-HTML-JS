@@ -1,0 +1,34 @@
+.showDataMahasiswa{
+    width: 80%;
+    height: 500px;
+    background-color: silver;
+    margin: auto;
+    margin-top: 80px;
+    border-radius: 20px;
+}
+
+.data-mahasiswa{
+    height: 380px;
+}
+
+.data-mahasiswa table{
+    color: #06125D;
+}
+
+.inputMahasiswa{
+    margin: auto;
+    margin-top: 80px;
+    padding: 50px 50px;
+    background-color: silver;
+    width: 550px;
+    border-radius: 20px;
+}
+
+.btn{
+    background-color: #06125D;
+}
+
+.btn:hover{
+    background-color: gold;
+    color: #06125D;
+}

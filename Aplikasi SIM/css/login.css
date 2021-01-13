@@ -1,0 +1,27 @@
+.login {
+    width: 500px;
+    margin: auto;
+    margin-top: 15%;
+    background-color: lightgray;
+    padding: 50px 50px;
+    border-radius: 20px;
+}
+
+.login h2 {
+    text-align: center;
+}
+
+.login .btn {
+    margin: 10px 0px;
+    background-color: #06125D;
+}
+
+.login .btn:hover{
+    background-color: gold;
+    color: black;
+}
+
+.register-link a {
+    text-decoration: none;
+    text-shadow: -1px 1px grey;
+}

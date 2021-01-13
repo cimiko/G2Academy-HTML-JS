@@ -1,0 +1,33 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css");
+@import url("./login.css");
+@import url("./pagination.css");
+@import url("./admin.css");
+
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+.page{
+    background-image: url("../img/pic2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+nav{
+    background-color: #06125D;
+}
+
+nav img{
+    font-size: 10px;
+    height: 35px;
+}
+
+.navbar-nav .nav-item .nav-link{
+    color: white;
+}
+
+.hidden{
+    display: none;
+}
