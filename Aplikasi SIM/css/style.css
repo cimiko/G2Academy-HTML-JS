@@ -3,6 +3,15 @@
 @import url("./pagination.css");
 @import url("./admin.css");
 
+* {cursor: url(https://ani.cursors-4u.net/games/gam-16/gam1569.cur), auto !important;}
+a, button {cursor: url(https://ani.cursors-4u.net/games/gam-16/gam1570.cur), auto !important;}
+
+/* * {cursor: url(https://ani.cursors-4u.net/others/oth-9/oth928.cur), auto !important;} */
+/* a, button {cursor: url(https://ani.cursors-4u.net/others/oth-9/oth929.cur), auto !important;} */
+/* * {cursor: url(https://ani.cursors-4u.net/others/oth-9/oth916.cur), auto !important;} */
+/* * {cursor: url(https://cur.cursors-4u.net/toons/too-11/too1005.ani), url(https://cur.cursors-4u.net/toons/too-11/too1005.png), auto !important;} */
+
+
 body{
     padding: 0px;
     margin: 0px;
