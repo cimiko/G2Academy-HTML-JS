@@ -122,7 +122,7 @@ function showMhs(page = 1) {
                 <td>${mhs.gender}</td>
                 <td>${mhs.faculty}</td>
                 <td>${mhs.majors}</td>
-                <td><button class="btn btn-danger btn-small" onclick="hapusDataMhs(${mhs.nim})">Hapus</button></td>
+                <td><button class="btn btn-danger btn-small" onclick="hapusDataMhs('${mhs.nim}')">Hapus</button></td>
                 <td><button class="btn btn-warning btn-small" onclick="editDataMhs(${mhs.nim})">Edit</button></td>
             </tr>
         `
@@ -139,10 +139,11 @@ const hapusDataMhs = (id) => {
         for (i in mhsList) {
             if (mhsList[i].nim == id) {
                 mhsList.splice(idx_data, 1);
+                break;
             }
             idx_data++;
         }
-        localStorage.setItem('dataMhs', JSON.stringify(dataMhs));
+        localStorage.setItem('dataMhs', JSON.stringify(mhsList));
         showMhs();
     }
 }

@@ -37,6 +37,10 @@ function showNilai(page = 1) {
     for (let index = startLoop; index < endLoop; index++) {
         const mhs = dataShow[index];
 
+        let findGrade = nilaiMhs.find(value => value.nim == mhs.nim)
+        // console.log("test",findGrade);
+        // console.log(findGrade.praktek);
+
         tr += `
             <tr>
                 <td>${index + 1}</td>
@@ -44,14 +48,30 @@ function showNilai(page = 1) {
                 <td>${mhs.name}</td>
                 <td>${mhs.faculty}</td>
                 <td>${mhs.majors}</td>
-                <td>${mhs.praktek}</td>
-                <td>${mhs.uts}</td>
-                <td>${mhs.uas}</td>
-                <td>${mhs.seminar}</td>
-                <td>${mhs.skripsi}</td>
-                <td>${mhs.sidang}</td>
+                <td>${findGrade.praktek}</td>
+                <td>${findGrade.uts}</td>
+                <td>${findGrade.uas}</td>
+                <td>${findGrade.seminar}</td>
+                <td>${findGrade.skripsi}</td>
+                <td>${findGrade.sidang}</td>
             </tr>
         `
+
+        // tr += `
+        //     <tr>
+        //         <td>${index + 1}</td>
+        //         <td>${mhs.nim}</td>
+        //         <td>${mhs.name}</td>
+        //         <td>${mhs.faculty}</td>
+        //         <td>${mhs.majors}</td>
+        //         <td>${mhs.praktek}</td>
+        //         <td>${mhs.uts}</td>
+        //         <td>${mhs.uas}</td>
+        //         <td>${mhs.seminar}</td>
+        //         <td>${mhs.skripsi}</td>
+        //         <td>${mhs.sidang}</td>
+        //     </tr>
+        // `
     }
     tbody.innerHTML = tr
 

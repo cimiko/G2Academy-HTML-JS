@@ -30,44 +30,29 @@ const user = () => {
 }
 
 const checkLoginMhs = () => {
-    // if (localStorage.loginSession == "false") {
-    //     window.location.href = "login.html";
-    // } else {
-    //     for (let i = 0; i < siswa.length; i++) {
-    //         if (siswa[i].nim == idUser) {
-    //             window.location.href = "mhs.html";
-    //             return;
-    //         } else {
-    //             for (let i = 0; i < dosen.length; i++) {
-    //                 if (dosen[i].nid.toUpperCase() == idUser.toUpperCase()) {
-    //                     window.location.href = "dsn.html";
-    //                 }
-    //             }
-    //         }
-    //         break;
-    //     }
-    // }
+    if (localStorage.loginSession == "false") {
+        window.location.href = "login.html";
+    } else {
+        for (let i = 0; i < dosen.length; i++) {
+            if (dosen[i].nid.toUpperCase() == idUser.toUpperCase()) {
+                window.location.href = "dsn.html";
+                return;
+            }
+        }
+    }
 }
 
 const checkLoginDsn = () => {
-    // if (localStorage.loginSession == "false") {
-    //     window.location.href = "login.html";
-    // } else {
-    //     for (let i = 0; i < dosen.length; i++) {
-    //         if (dosen[i].nid == idUser) {
-    //             window.location.href = "dsn.html";
-    //             return;
-    //         } else {
-    //             for (let i = 0; i < siswa.length; i++) {
-    //                 if (siswa[i].nim == idUser) {
-    //                     window.location.href = "mhs.html";
-    //                 }
-    //             }
-    //         }
-    //         break;
-    //     }
-    //     return;
-    // }
+    if (localStorage.loginSession == "false") {
+        window.location.href = "login.html";
+    } else {
+        for (let i = 0; i < siswa.length; i++) {
+            if (siswa[i].nim == idUser) {
+                window.location.href = "mhs.html";
+                return;
+            }
+        }
+    }
 }
 
 const checkLoginAdmin = () => {

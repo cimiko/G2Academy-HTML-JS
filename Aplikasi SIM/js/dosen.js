@@ -3,18 +3,18 @@ let dsnData = JSON.parse(localStorage.getItem('dataDsn'));
 console.log(dsnData);
 let dataD;
 
-// for (let i = 0; i < dsnData.length; i++) {
-//     dataD = {
-//     nid : dsnData[i].nid,
-//         name : dsnData[i].name,
-//         gender : dsnData[i].gender,
-//         religion : dsnData[i].religion,
-//         birthPlace : dsnData[i].birthPlace,
-//         birthDate : dsnData[i].birthDate,
-//         faculty : dsnData[i].faculty,
-//         majors : dsnData[i].majors}
-//         dataDsn.push(dataD)
-// }
+for (let i = 0; i < dsnData.length; i++) {
+    dataD = {
+    nid : dsnData[i].nid,
+        name : dsnData[i].name,
+        gender : dsnData[i].gender,
+        religion : dsnData[i].religion,
+        birthPlace : dsnData[i].birthPlace,
+        birthDate : dsnData[i].birthDate,
+        faculty : dsnData[i].faculty,
+        majors : dsnData[i].majors}
+        dataDsn.push(dataD)
+}
 
 
 let idxDsn = 0;
@@ -116,8 +116,8 @@ function showDsn(page = 1) {
                 <td>${mhs.gender}</td>
                 <td>${mhs.faculty}</td>
                 <td>${mhs.majors}</td>
-                <td><button class="btn btn-danger btn-small" onclick="hapusDataDsn(${mhs.nid})">Hapus</button></td>
-                <td><button class="btn btn-warning btn-small" onclick="editDataDsn(${mhs.nid})">Edit</button></td>
+                <td><button class="btn btn-danger btn-small" onclick="hapusDataDsn('${mhs.nid}')">Hapus</button></td>
+                <td><button class="btn btn-warning btn-small" onclick="editDataDsn('${mhs.nid}')">Edit</button></td>
             </tr>
         `
     }
@@ -133,10 +133,11 @@ const hapusDataDsn = (id) => {
         for (i in dsnList) {
             if (dsnList[i].nid == id) {
                 dsnList.splice(idx_data, 1);
+                break;
             }
             idx_data++;
         }
-        localStorage.setItem('dataDsn', JSON.stringify(dataDsn));
+        localStorage.setItem('dataDsn', JSON.stringify(dsnList));
         showDsn();
     }
 }
