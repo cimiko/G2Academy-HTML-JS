@@ -116,8 +116,8 @@ function showDsn(page = 1) {
                 <td>${mhs.gender}</td>
                 <td>${mhs.faculty}</td>
                 <td>${mhs.majors}</td>
-                <td><button class="btn btn-danger btn-small" onclick="hapusData(${mhs.nid})">Hapus</button></td>
-                <td><button class="btn btn-warning btn-small" onclick="editData(${mhs.nid})">Edit</button></td>
+                <td><button class="btn btn-danger btn-small" onclick="hapusDataDsn(${mhs.nid})">Hapus</button></td>
+                <td><button class="btn btn-warning btn-small" onclick="editDataDsn(${mhs.nid})">Edit</button></td>
             </tr>
         `
     }
@@ -126,7 +126,7 @@ function showDsn(page = 1) {
     // renderPagination(page)
 }
 
-const hapusData = (id) => {
+const hapusDataDsn = (id) => {
     if (localStorage.dataDsn) {
         dsnList = JSON.parse(localStorage.getItem('dataDsn'));
         idx_data = 0;

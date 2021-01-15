@@ -10,6 +10,7 @@
     <script src="./js/logout.js" defer></script>
     <script src="./js/pageMhs.js" defer></script>
     <script src="./js/script.js" defer></script>
+    <script src="./js/exportExel.js" defer></script>
 </head>
 
 <body onload="checkLoginMhs(), user()">
@@ -76,7 +77,7 @@
         <div class="showDataNilaiMahasiswa hidden">
             <div class="button">
                 <button class="btn btn-success m-2" onclick="showInputNilai()">Input Nilai</button>
-                <button class="btn btn-success" onclick="tableHtmlToExcel('data')">Download Data</button>
+                <button class="btn btn-success" onclick="tableHtmlToExcel('dataNilai')">Download Data</button>
             </div>
 
             <div class="container show-table">
@@ -94,7 +95,7 @@
                 </div> -->
 
                 <div class="container data-mahasiswa" id="list-data">
-                    <table class="table" type="listNilai" id="data">
+                    <table class="table" type="listNilai" id="dataNilai">
                         <thead>
                             <tr>
                                 <th scope="col ">No</th>
