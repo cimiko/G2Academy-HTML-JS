@@ -1,5 +1,4 @@
-* {cursor: url(https://ani.cursors-4u.net/games/gam-16/gam1569.cur), auto !important;}
-.dot {cursor: url(https://ani.cursors-4u.net/games/gam-16/gam1570.cur), auto !important;}
+@import url('./my.css');
 
 body{
     margin: 0;
@@ -21,7 +20,7 @@ body{
     margin: 10px 10px;
     border: 1px solid black;
     display: inline-block;
-    background-color: whitesmoke;
+    background-color: gold;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -30,6 +29,11 @@ body{
 
 .boxDots{
     text-align: center;
+}
+
+.boxDots:hover{
+    text-align: center;
+    background-color: black;
 }
 
 .circleWht{
