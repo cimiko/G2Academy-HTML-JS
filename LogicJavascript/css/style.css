@@ -36,7 +36,17 @@ body{
     background-color: black;
 }
 
-.circleWht{
+.dotWht{
+    margin: 10px 10px;
     border: 1px solid black;
+    display: inline-block;
     background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px 2px grey;
+}
+
+.dotWht:hover{
+    background-color: red;
 }

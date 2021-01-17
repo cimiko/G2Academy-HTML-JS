@@ -2,7 +2,7 @@
 for (let i = 0; i < 5; i++) {
     document.querySelector('.logic').innerHTML += "test "
     for (let j = 0; j < 5; j++) {
-        document.querySelector('.logic').innerHTML += "test " 
+        document.querySelector('.logic').innerHTML += "test "
     }
     document.querySelector('.logic').innerHTML += "<br>"
 }
@@ -22,33 +22,18 @@ for (let i = 0; i < 5; i++) {
 // }
 // generateDot()
 
-const generateDot2 = _ =>{
-    const dot = `<div class="dot"></div>`
-
-    for (let i = 0; i < 5; i++) {
-        document.querySelector("div.boxDots").innerHTML += dot;
-        for (let j = 0; j < 4; j++) {
-            document.querySelector("div.boxDots").innerHTML += dot;
-        }
-        document.querySelector("div.boxDots").innerHTML += "<br>"
-    }
-}
-generateDot2()
-
-// const generateDot3 = _ =>{
+// const generateDot2 = _ =>{
 //     const dot = `<div class="dot"></div>`
 
-//     let dt = "";
 //     for (let i = 0; i < 5; i++) {
 //         document.querySelector("div.boxDots").innerHTML += dot;
 //         for (let j = 0; j < 4; j++) {
-//             dt += dot.outerHTML
 //             document.querySelector("div.boxDots").innerHTML += dot;
 //         }
 //         document.querySelector("div.boxDots").innerHTML += "<br>"
 //     }
 // }
-// generateDot3()
+// generateDot2()
 
 // const generateDot4 = _ =>{
 //     const dot = `<div class="dot"></div>`
@@ -64,3 +49,137 @@ generateDot2()
 //     box.innerHTML = dt
 // }
 // generateDot4()
+
+const generateDot3 = (el) => {
+    const dot = `<div class="dot"></div>`
+    const dotWht = `<div class="dotWht"></div>`
+
+
+    for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5; j++) {
+            if (el.toLowerCase() == "a") {
+                if (j == 2 && ((i % 2 == 0) && i != 4)) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else if (((j % 2 == 0) && (i >= 1)) || (i == 0)) {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                }
+            } else if (el.toLowerCase() == "b") {
+                if ((i % 2 == 0) || (j % 4 == 0)) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            } else if (el.toLowerCase() == "c") {
+                if ((i % 4 == 0) || j == 0) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            } else if (el.toLowerCase() == "d") {
+                if (((i % 4 == 0) && j < 3) || ((j % 3 == 0) && (i % 4))) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            } else if (el.toLowerCase() == "e") {
+                if ((j == 0) || i % 2 == 0) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            } else if (el.toLowerCase() == "f") {
+                if ((j == 0) || ((i % 2 == 0) && (i % 3 != 1))) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            } else if (el.toLowerCase() == "g") {
+                if ((j % 5 == 0) || i % 2 == 0 || ((j % 4 == 0) && i > 1)) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            } else if (el.toLowerCase() == "h") {
+                if ((j % 4 == 0) || i == 2) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            } else if (el.toLowerCase() == "i") {
+                if ((i % 4 == 0) || j == 2) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            } else if (el.toLowerCase() == "j") {
+                if (((i % 5 == 0) && j < 3) || ((j == 2) && i < 4) || ((i > 3) && (j <= 1))) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            } else if (el.toLowerCase() == "k") {
+                if ((j == 1) || ((j == 2) && (i % 2 == 1)) || ((j == 3) && (i % 4 == 0))) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            } else if (el.toLowerCase() == "l") {
+                if ((j == 1) || ((i > 3) && j > 0)) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            } else if (el.toLowerCase() == "m") {
+                if (i == 0 || (j % 2 == 0)) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            } else if (el.toLowerCase() == "n") {
+                if (i == 0 || (j % 4 == 0)) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            } else if (el.toLowerCase() == "o") {
+                if ((i % 4 == 0) || (j % 4 == 0)) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            } else if (el.toLowerCase() == "p") {
+                if ((j == 0) || ((i % 2 == 0) && i < 3) || ((j == 4) && i < 3)) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            } else if (el.toLowerCase() == "q") {
+                if ((j == 4) || ((i % 2 == 0) && i < 3) || ((j == 0) && i < 3)) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            } else if (el.toLowerCase() == "r") {
+                if ((j == 0) || ((i % 2 == 0) && i < 3) || ((j == 4) && i < 3)) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else if (((i % 3 == 0) && (j == 2)) || ((i > 3) && (j == 3))) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            } else if (el.toLowerCase() == "t") {
+                if ((i % 5 == 0) || j == 2) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            }
+        }
+        document.querySelector("div.boxDots").innerHTML += "<br>"
+    }
+}
+generateDot3("r")
+
+
