@@ -6,12 +6,39 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="./js/script.js" defer></script>
+    <script src="./js/clock.js" defer></script>
 
 </head>
-<body>
+<body onload="typing()//, setDate()">
     <div class="logic"></div>
+    <div class="Wall-Clock">
+        <div class="clock">
+            <div class="hand hour"></div>
+            <div class="hand minute"></div>
+            <div class="hand second"></div>
+        </div>
+    </div>
+    <div id="Tulisan"></div>
     <br>
     <!-- <div class="dot"></div> -->
-    <div class="boxDots"></div>
+    
+    <div class="form-Alfa">
+        <form onsubmit="submitForm1()" name="inputData">
+            <label class="form-label">Input Generate Alfabet</label>
+            <input type="text" name="data" class="form-control" onkeyup="submitForm(this)">
+            <!-- <input type="text" name="data" class="form-control"> -->
+            <!-- <div class="row">
+                <div class="col-6">
+                    <button type="submit" class="btn btn-primary w-100 mt-2">Generate</button>
+                </div>
+                <div class="col-6">
+                    <button type="button" onclick="removeData()" class="btn btn-danger w-100 mt-2">Delete</button>
+                </div>
+            </div> -->
+        </form>
+    </div>
+    <div class="data">
+        <div class="boxDots"></div>
+    </div>
 </body>
 </html>

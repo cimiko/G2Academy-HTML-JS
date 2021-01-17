@@ -1,11 +1,11 @@
 
-for (let i = 0; i < 5; i++) {
-    document.querySelector('.logic').innerHTML += "test "
-    for (let j = 0; j < 5; j++) {
-        document.querySelector('.logic').innerHTML += "test "
-    }
-    document.querySelector('.logic').innerHTML += "<br>"
-}
+// for (let i = 0; i < 5; i++) {
+//     document.querySelector('.logic').innerHTML += "test "
+//     for (let j = 0; j < 5; j++) {
+//         document.querySelector('.logic').innerHTML += "test "
+//     }
+//     document.querySelector('.logic').innerHTML += "<br>"
+// }
 
 // const generateDot = _ =>{
 //     const dot = document.querySelector("div.dot")
@@ -49,6 +49,42 @@ for (let i = 0; i < 5; i++) {
 //     box.innerHTML = dt
 // }
 // generateDot4()
+
+const submitForm = (self) => {
+    event.preventDefault()
+    let data = document.querySelector('div.boxDots')
+    let data3 = document.querySelector('div.data')
+    data.remove()
+    let form = self.value
+    let test = ""
+    data3.innerHTML = `<div class="boxDots"></div>`
+    return test = generateDot3(form);
+}
+
+const submitForm1 = () => {
+    event.preventDefault()
+    let data = document.querySelector('div.boxDots')
+    let data1 = document.querySelector('.dot')
+    let data2 = document.querySelectorAll('.dotWht')
+    let data3 = document.querySelector('div.data')
+    
+    data.remove()
+
+    let form = document.inputData.data.value
+    let test = ""
+    data3.innerHTML = `<div class="boxDots"></div>`
+    return test = generateDot3(form);
+}
+
+const removeData = () =>{
+    let data = document.querySelector('div.boxDots')
+    let data1 = document.querySelector('.dot')
+    let data2 = document.querySelectorAll('.dotWht')
+    let data3 = document.querySelector('div.data')
+    data.remove()
+    data3.innerHTML = `<div class="boxDots"></div>`
+
+}
 
 const generateDot3 = (el) => {
     const dot = `<div class="dot"></div>`
@@ -226,6 +262,44 @@ const generateDot3 = (el) => {
         document.querySelector("div.boxDots").innerHTML += "<br>"
     }
 }
-generateDot3("z")
+
+let i = 0, Tulisan;
+// Tulisan = `Halo Nama Saya Hartono, Git Hub: https://github.com/cimiko jangan lupa follow yah!!`
+Tulisan = `Halo Nama Saya Hartono, Salam Kenal Semuanya!!!`
+
+const typing = () => {
+    if (i < Tulisan.length) {
+        document.querySelector("#Tulisan").innerHTML += Tulisan.charAt(i);
+        i++;
+        setTimeout( typing, 100);
+    }else if( i >= Tulisan.length){
+        // setTimeout( typing, 1000)
+        i = 0;
+        document.querySelector("#Tulisan").innerHTML = "";
+        typing()
+    }
+}
+// typing();
+
+
+const setDate = () => {
+    const hourHand = document.querySelector('.hour');
+    const minuteHand = document.querySelector('.minute');
+    const secondHand = document.querySelector('.second');
+    const now = new Date();
+    
+    const minuteDegrees = ((now.getMinutes() / 60) * 360) + 180;
+    minuteHand.style.transform = `rotate(${minuteDegrees}deg)`;
+    
+    const hourDegrees = ((now.getHours()/12) * 360) + 180;
+    hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+
+    const secondDegrees = ((now.getSeconds() / 60) * 360) + 180;
+    secondHand.style.transform = `rotate(${secondDegrees}deg)`;
+    setInterval(setDate, 1000);
+}
+// setDate()
+
+
 
 
