@@ -169,8 +169,54 @@ const generateDot3 = (el) => {
                 } else {
                     document.querySelector("div.boxDots").innerHTML += dotWht;
                 }
+            } else if (el.toLowerCase() == "s") {
+                if (i % 2 == 0 || ((j == 0) && i < 3) || ((j == 4) && i > 2)) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
             } else if (el.toLowerCase() == "t") {
                 if ((i % 5 == 0) || j == 2) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            } else if (el.toLowerCase() == "u") {
+                if ((j % 4 == 0) || i == 4) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            } else if (el.toLowerCase() == "v") {
+                if (((j % 4 == 0) && i == 1) || ((j % 2 == 1) && i == 2) || ((j == 2) && i == 3)) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            } else if (el.toLowerCase() == "w") {
+                if ((i == 2 && (j % 2 == 0)) || (i == 3 && (j % 2 == 1))) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            }else if (el.toLowerCase() == "x") {
+                if (((j % 4 == 0) && i == 0) || ((j % 2 == 1) && i == 1) || ((j == 2) && i == 2)) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else if (((j % 4 == 0) && i == 4) || ((j % 2 == 1) && i == 3)) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else{
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            }else if (el.toLowerCase() == "y") {
+                if (((j % 4 == 0) && i == 0) || ((j % 2 == 1) && i == 1) || ((j == 2) && i == 2)) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                }else if ((j == 2) && i > 2) {
+                    document.querySelector("div.boxDots").innerHTML += dot;
+                } else {
+                    document.querySelector("div.boxDots").innerHTML += dotWht;
+                }
+            }else if (el.toLowerCase() == "z") {
+                if (i % 4 == 0 || (j == 3 && i == 1) || (j == 2 && i == 2) || (j == 1 && i == 3)) {
                     document.querySelector("div.boxDots").innerHTML += dot;
                 } else {
                     document.querySelector("div.boxDots").innerHTML += dotWht;
@@ -180,6 +226,6 @@ const generateDot3 = (el) => {
         document.querySelector("div.boxDots").innerHTML += "<br>"
     }
 }
-generateDot3("r")
+generateDot3("z")
 
 
