@@ -91,7 +91,7 @@ const generateDot3 = (el) => {
     const dot = `<div class="dot"></div>`
     const dotWht = `<div class="dotWht"></div>`
 
-
+    console.time()
     for (let i = 0; i < 5; i++) {
         for (let j = 0; j < 5; j++) {
             if (el.toLowerCase() == "a") {
@@ -262,6 +262,7 @@ const generateDot3 = (el) => {
         }
         document.querySelector("div.boxDots").innerHTML += "<br>"
     }
+    console.timeEnd()
 }
 
 let i = 0, Tulisan;
