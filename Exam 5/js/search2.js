@@ -1,9 +1,9 @@
 const searchData = self => {
-    const valueSearch = self.value
+    const valueSearch = self.value.toLowerCase()
 
 
     const filteredData = userList.filter(value => {
-        return value.name.includes(valueSearch) || value.address.includes(valueSearch);
+        return value.name.toLowerCase().includes(valueSearch) || value.address.toLowerCase().includes(valueSearch);
 
     })
 
