@@ -86,10 +86,10 @@ const daftarData = () => {
                     '<td>' + dataPerson[i].kelamin + ' </td>' +
                     '<td>' + dataPerson[i].hobi + ' </td>' +
                     '<td>' + dataPerson[i].agama + ' </td>' +
-                    '<td><button class="btn btn-danger btn-small" onclick="hapusData(' + dataPerson[i].id_data + ')">Hapus</button></td>' +
-                    '<td><button class="btn btn-warning btn-small" onclick="editData(' + dataPerson[i].id_data + ')">Edit</button></td>';
-                // '<td><a class="btn btn-danger btn-small" href="javascript:void(0)" onclick="hapusData(\'' + dataPerson[i].id_data + '\')">Hapus</a></td>' +
-                // '<td><a class="btn btn-warning btn-small" href="javascript:void(0)" onclick="editData(\'' + dataPerson[i].id_data + '\')">Edit</a></td>';
+                    // '<td><button class="btn btn-danger btn-small" onclick="hapusData(' + dataPerson[i].id_data + ')">Hapus</button></td>' +
+                    // '<td><button class="btn btn-warning btn-small" onclick="editData(' + dataPerson[i].id_data + ')">Edit</button></td>';
+                '<td><a class="btn btn-danger btn-small" href="javascript:void(0)" onclick="hapusData(\'' + dataPerson[i].id_data + '\')">Hapus</a></td>' +
+                '<td><a class="btn btn-warning btn-small" href="javascript:void(0)" onclick="editData(\'' + dataPerson[i].id_data + '\')">Edit</a></td>';
                 data_app += '</tr>';
 
             }

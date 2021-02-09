@@ -3,12 +3,6 @@ let currentPage = 0
 
 console.log(userList);
 
-// function pagination() {
-//     // console.log("params:", params);
-//     console.log("pagination");
-//     console.info("currentPage:", currentPage)
-//     console.warn("Value:", userList[currentPage])
-// }
 
 // save form
 function save() {
@@ -87,7 +81,7 @@ function getSelectedAll(name) {
 }
 
 const hapusData = (id) => {
-    if (localStorage.userList && localStorage.id_data) {
+    if (localStorage.userList) {
         userList = JSON.parse(localStorage.getItem('userList'));
         idx_data = 0;
         for (i in userList) {
@@ -103,7 +97,7 @@ const hapusData = (id) => {
 
 const editData = (id) => {
 
-    if (localStorage.userList && localStorage.id_data) {
+    if (localStorage.userList) {
         userList = JSON.parse(localStorage.getItem('userList'));
         let form = document.userInput
         idx_data = 0;
@@ -111,6 +105,9 @@ const editData = (id) => {
             if (userList[i].id_data == id) {
                 form.name.value = userList[i].name
                 form.address.value = userList[i].address
+                form.gender.value = userList[i].gender
+                form.hobby.value = userList[i].hobby
+                form.religion.value = userList[i].religion
                 userList.splice(idx_data, 1);
             }
             idx_data++;
