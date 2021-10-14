@@ -14,9 +14,9 @@ const logout = () => {
 const user = () => {
     let nav = document.querySelector('.nav')
 
-    nav.innerHTML = `
-        <a class="navbar-brand" href="#">${userLogin.toUpperCase()}</a>
-    `
+    // nav.innerHTML = `
+    //     <a class="navbar-brand" href="#">${userLogin.toUpperCase()}</a>
+    // `
 }
 user()
 
@@ -34,7 +34,7 @@ const checkLoginKaryawan = () => {
 }
 
 const checkLoginAdmin = () => {
-    if (localStorage.loginSession == "false") {
+    if (localStorage.loginSession == 'false') {
         window.location.href = "login.html";
     } else {
         for (let i = 0; i < Karyawan.length; i++) {
